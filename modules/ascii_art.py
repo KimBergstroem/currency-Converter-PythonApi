@@ -1,3 +1,7 @@
+'''
+Different ASCII HEADINGS TEXT
+-------------------------------------------------------------
+'''
 from modules.text_colors import TextColors
 t = TextColors
 

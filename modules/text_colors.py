@@ -1,3 +1,7 @@
+'''
+Text Color - That can change color text format
+-------------------------------------------------------------
+'''
 class TextColors:
     red = "\u001b[0;31m"
     green = "\u001b[0;32m"
