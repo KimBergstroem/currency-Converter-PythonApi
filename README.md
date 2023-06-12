@@ -1,4 +1,4 @@
-# Travel Guide / Currency Converter 🔵
+# Travel Guide / Currency Converter 🌎
 
 ![travel_Guide WebbApp](docs/screenshots/readme-travel_guide-banner.png)
 
@@ -6,14 +6,16 @@
 
 Do you know what currency are used in that country? Do you know how much your current currency are in that value?
 
-The Currency Exchanger and Travel Quiz is a <b>Python-based</b> application that allows users to convert between different currencies and also engages them with a fun travel quiz. The application aims to provide a convenient currency conversion tool while offering an enjoyable user experience through a captivating design and travel-related questions.
+The Currency Exchanger and Travel Quiz is a <b>Python-based 🐍</b> application that allows users to convert between different currencies and also engages them with a fun travel quiz. The application aims to provide a convenient currency conversion tool while offering an enjoyable user experience through a captivating design and travel-related questions.
 
 
 ![Language uses](https://img.shields.io/github/languages/count/kimbergstroem/PP3)
 ![GitHub top language](https://camo.githubusercontent.com/74837de6a05b9a1c4bc511f79c44c2b4eccb6ec8de382295e6cccbfbed1ac6f0/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6d61726b646f776e2d2532333030303030302e7376673f7374796c653d666c61743d6d61726b646f776e266c6f676f436f6c6f723d7768697465)
 ![Python](https://camo.githubusercontent.com/a00abd8cea4105fa1cad91f7235d11206b492f51afeb9b23a25d04e8f36935e3/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f507974686f6e2d4646443433423f7374796c653d666f722d7468652d6261646765266c6f676f3d707974686f6e266c6f676f436f6c6f723d626c7565)
 
-## Table of content
+--- 
+
+## **Table of content**
 
 - [User Story](#user-story)
 - [How to Use Travel Guide](#how-to-use-bedtime-adventures)
@@ -26,15 +28,21 @@ The Currency Exchanger and Travel Quiz is a <b>Python-based</b> application that
 - [Deployment](#deployment)
 - [Credits](#credits)
 
-## User story
+--- 
+
+## **User story**🌎
 As a user who loves to travel and needs to convert currencies, I want to use the Currency Exchanger and Travel Quiz application to easily convert currencies and enjoy an interactive travel-related experience.
 
-## How to use Travel Guide
+--- 
+
+## **How to use Travel Guide**🌎
 To get started, simply input the travel destination and also of how much amount of money you will bring with you into the travelling.
 
 COMING MORE
 
-## Program flow
+--- 
+
+## **Program flow**🌎
 The flowchart represents the logic of the Bedtime Adventures program. The program starts by prompting the user to input two names and validates the input to ensure that each name is at least three letters long and contains only letters. <br>
 ![flowchart](/assets/images/flowchart.jpg)
 
@@ -46,22 +54,28 @@ This process repeats for the third part of the adventure story, where the user i
 
 Finally, the program displays the ending of the adventure story based on the user's choices throughout the three parts of the story. 
 
-## Data model
+--- 
+
+## **Data model**🌎
 The program uses the Google Sheets API to access a Google Sheet that contains the adventure story text. The program then replaces the placeholders for the user names and presents the story to the users. The program uses input() function to get the user's choices and a series of validation functions to ensure that the user inputs are valid.
 
-## Technologies used
-### Language
+--- 
+
+## **Technologies used**🌎
+### **Language**
 - Python 3: primary programming language for the project
 
-### Programs used
+### **Programs used**
 - Lucidchart: an online diagramming tool, was used to create flowcharts for the project
 - Gitpod: cloud-based IDE used for version control and writing code
 - Git: version control system used for managing and tracking changes to the project's codebase
 - GitHub: web-based hosting service used for version control and storing the project's code after being pushed from Gitpod
 - Heroku: cloud platform used for deploying and hosting the project's web application
 
-## Features
-### Existing features
+--- 
+
+## **Features**🌎
+### **Existing features**
 This adventure game program prompts users to enter two names and presents them with an adventure story that is divided into three parts. The program checks for errors, such as if the user enters less than three letters or anything other than letters. The error messages are displayed as shown below: <br>
 ![name_prompt](/assets/images/3letters.png)
 ![only_letters](/assets/images/onlyletters.png)
@@ -79,13 +93,15 @@ After the user has made a choice, a confirmation message to reassure that the ch
 The second part of the story corresponds to the user's choice. <br>
 The third part is the ending of the story, which is also determined by the user's choices in the previous parts.
 
-### Future ideas
+### **Future ideas**
 - More options in story
 - More story lines to follow so you begin with picking a story
 - Possibility to name the teddy bear after the childs favorite teddy bear. 
 
-## Testing:
-### Name validation:
+--- 
+
+## **Validation**🌎
+### **Name validation:**
 - 3 or more letters inserted - OK for both names
 - Only letters - OK for both names
 - Correct name input - OK for both names
@@ -93,35 +109,46 @@ The third part is the ending of the story, which is also determined by the user'
 - 2 lettters inserted - OK, gives correct error message
 - Name validation for second name input - OK
 
-### First choice validation:
+### **First choice validation:**
 - X - OK
 - Y - OK
 - anything else inserted - OK, gives the correct error message
 
-### Second choice validation:
+### **Second choice validation:**
 - X - OK
 - Y - OK
 - anything else inserted - OK, gives the correct error message
 
-### Third choice validation:
+### **Third choice validation:**
 - X - OK
 - Y - OK
 - anything else inserted - OK, gives the correct error message
 
-## Bugs:
-### Known bugs:
-- The textwrap is causing an unintenional line breaks since I added the possibility for line breaks with the parameter replace_whitespace=False. Thouhgt of creating line breaks in the source text instead but since we don´t know the lenght of the names that we get from input we can't control that the line breaks will end up where best suited this way. Not having line breaks at all is not an option since then we go back to long lines and breaking words instead of doing line breaks after/before words.
+--- 
 
-### Fixed bugs:
-- Name validation for only letters will cause an error everytime because of the csv.
-    - Created 2 input fields so one for each name instaed. Changed so it validates that there is 3 or more letters in each name. 
-- At first choice when Y is pressed, error message: UnboundLocalError: local variable 'story' referenced before assignment.
-    - I had mistakenly added an extra = when calling the SHEET. 
+## **Testing**🌎
 
-- When I have made my first choice it directly tells me again to make a choice even if I put in a valid value (X or Y)
-    - by putting a print(bug) before the first input in get_start_story and a print(bug2) before the second input in get_adventure_story I realized that it jumped straight to the input field in get_adventure_story after I have put in a valid value, but went back to the input field in the get_start_story if I put in a not valid value. Turnes out that I mistakenly have removed the print(story_text) in get_adventure_story so everything else was working as it should. 
+&nbsp;
+### **Solved Bugs**
+| Type   | Bug                                                                                                                                                                                                                                                                                                                                           | Solution                                                                                                                                                                                                                                                                                                                                                                    |
+|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| run.py | Coming soon | Coming soon | 
+| run.py | Coming soon | Coming soon |  
+| run.py | Coming soon | Coming soon |                                                                                                                                                                
 
-## Deployment
+&nbsp;
+### **Known Bugs**
+| Type   | Bug                                                                                                                                                                                                                                                                                                                                           | Solution                                                                                                                                                                                                                                                                                                                                                                    |
+|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| run.py | Coming soon | Coming soon | 
+| run.py | Coming soon | Coming soon |  
+| run.py | Coming soon | Coming soon |
+
+&nbsp;
+
+--- 
+
+## **Deployment**🌎
 To deploy this project, follow these steps:
 
 1. Fork and clone this repository to your local machine.
@@ -132,7 +159,9 @@ To deploy this project, follow these steps:
 
 After following these steps, your app should be successfully deployed to Heroku. 
 
-## Credits
+--- 
+
+## **Credits**🌎
 
 The development of this project was inspired by various online resources including tutorials from Simplilearn and Digital Ocean, as well as references from websites like W3Schools and GeeksforGeeks. Special credit goes to my mentor for their unwavering support, guidance and valuable feedback throughout the project.
 
@@ -145,7 +174,7 @@ The development of this project was inspired by various online resources includi
 - [nkmk](https://note.nkmk.me/en/python-textwrap-wrap-fill-shorten/),  
 - [Scaler](https://www.scaler.com/topics/how-to-clear-screen-in-python/) for their discussions on using the `textwrap` module and clearing the screen in Python.
 
-###  **Acknowledgments**🔹
+###  **Acknowledgments**
 
 I'd like to give recognition to the individuals who supported me in finishing this project:
 
