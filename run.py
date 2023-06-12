@@ -23,8 +23,6 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("travel_Guide")
 
-
-
 def welcome_message():
     """
     Displaying Welcome Message along with ASCII HEADING
@@ -37,8 +35,7 @@ def welcome_message():
         sys.stdout.flush()
         time.sleep(0.1)
     user_name = input(f"{t.bold}Please let me know your name: ")
-    print(f"{t.green}{t.bold}Thank you! and welcome once again {user_name} to this Traveling Guide!"{t.end})
-
+    print(f"{t.green}{t.bold}Thank you! and welcome once again {user_name} to this Traveling Guide!{t.end}")
 
 def main():
     """
