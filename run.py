@@ -1,22 +1,37 @@
-import gspread
+import sys, time, os
+import gspread 
+import time
 from google.oauth2.service_account import Credentials
 
-SCOPE = [ #IAM
+from modules.ascii_art import display_welcome_title # Adds ascii art text headings
+from modules.text_colors import TextColors # Adds color to text
+t = TextColors # Declaring the function to smaller variabel
+
+SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/drive"
     ]
 
-CREDS = Credentials.from_service_account_file('creds.json')
+CREDS = Credentials.from_service_account_file("creds.json")
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('travel_Guide')
-
-region = SHEET.worksheet('region')
-
-data = region.get_all_values()
-print(data)
+SHEET = GSPREAD_CLIENT.open("travel_Guide")
 
 
+def welcome_message():
+    display_welcome_title()
+    time.sleep(1)
+    message = (f"Hello and welcome! I hope you will enjoy this guide and I wish you a happy travelling! \n")
+    for char in message:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.1)
+    user_name = input(f"{t.bold}Please enter your name: ")
+    print(f"{t.green}{t.bold}Thank you! and welcome once again {user_name} to this Traveling Guide!")
 
-# TRAVEL GUIDE - CURRENCY EXCHANGE
+def main():
+    welcome_message()
+    return
+
+main()
