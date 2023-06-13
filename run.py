@@ -37,9 +37,32 @@ def welcome_message():
     user_name = input(f"{t.bold}Please let me know your name: ")
     print(f"{t.green}{t.bold}Thank you! and welcome once again {user_name} to this Traveling Guide!{t.end}")
     time.sleep(3)
-
     os.system('clear')
+
+
+def welcome_meny():
+    
     display_welcome_meny()
+    while True:
+        user_nav = int(input(f"Enter you number here: "))
+        if user_nav == 1:
+            display_meny_country()
+            break
+        elif user_nav == 2:
+            display_meny_currency_code()
+            break
+        elif user_nav == 3:
+            convert_currency()
+            break
+        else:
+            print("You choice wrong number, pick again")
+
+def display_meny_country():
+    print("Were do you want to travel?")
+
+def display_meny_currency_code():
+    print("What do you want to convert")
+
 
 
 def main():
@@ -47,7 +70,6 @@ def main():
     Will run all everything
     """
     welcome_message()
-    convert_currency()
-    return
+    welcome_meny()
 
 main()
