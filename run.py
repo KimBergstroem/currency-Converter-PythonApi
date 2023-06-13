@@ -29,7 +29,7 @@ def welcome_message():
     """
     display_welcome_title()
     time.sleep(1)
-    message = (f"Hello and welcome! I hope you will enjoy this guide and I wish you a happy travelling! \n")
+    message = (f"{t.bold}Hello and welcome! I hope you will find this guide useful! \n")
     for char in message:
         sys.stdout.write(char)
         sys.stdout.flush()

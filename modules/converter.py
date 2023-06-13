@@ -4,12 +4,13 @@ Currency Converter
 API from Fixer API - https://apilayer.com/
 '''
 import requests
-
+from modules.text_colors import TextColors # Adds color to text
+t = TextColors # Declaring the function to smaller variabel
 
 def convert_currency():
     while True:
-        init_currency = input('Enter Three-letter currency code, you would like to convert from: ')
-        target_currency = input('Enter Three-letter currency code, you would like to convert to: ')
+        init_currency = input('Enter currency code, you would like to convert from: ')
+        target_currency = input('Enter currency code, you would like to convert to: ')
 
         while True:
             try:
@@ -40,7 +41,7 @@ def convert_currency():
         result = response.json()
         print('Conversion result: ' + str(result['result']))
 
-        repeat = input(f"Do you wanna convert again? (y / n): \n")
+        repeat = input(f"Do you wanna convert again? ({t.green}y{t.end} / {t.red}n{t.end}): \n")
         if repeat != "y":
             break
 
