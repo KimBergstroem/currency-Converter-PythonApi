@@ -5,7 +5,7 @@ Different ASCII HEADINGS TEXT
 from modules.text_colors import TextColors
 t = TextColors
 
-def display_welcome_title():
+def display_welcome_title(): # Welcome Title
     welcome_title = f"""  
  {t.yellow}
 
@@ -27,7 +27,7 @@ def display_welcome_title():
     print(welcome_title)
 
 
-def display_welcome_meny():
+def display_welcome_meny(): # Welcome Meny
     welcome_meny = f"""  
  {t.yellow}
  _________________________________________________________________
@@ -42,3 +42,20 @@ def display_welcome_meny():
 {t.end}                                            
     """
     print(welcome_meny)
+
+
+def display_meny_exchange_title(): # Exchange Meny Title
+    exchange_title = f"""  
+ {t.yellow}
+ _________________________________________________________________
+   __          _{t.end}                                       {t.green}_{t.end}          {t.yellow}|
+  /__\_  _____| |__   __ _ _ __   __ _  ___{t.end}           {t.green}| |{t.end}         {t.yellow}|
+ /_\ \ \/ / __| '_ \ / _` | '_ \ / _` |/ _ |{t.end}         {t.green}/ __){t.end}        {t.yellow}|
+//__  >  < (__| | | | (_| | | | | (_| |  __/{t.end}         {t.green}\__ \{t.end}        {t.yellow}|
+\__/ /_/\_\___|_| |_|\__,_|_| |_|\__, |\___|{t.end}         {t.green}(   /{t.end}        {t.yellow}|
+                                 |___/{t.end}                {t.green}|_|{t.end}         {t.yellow}| 
+                                                                  |
+{t.bold}Convert your current currency into another one                    |                
+  {t.end}                                                         
+    """
+    print(exchange_title)

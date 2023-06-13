@@ -7,7 +7,7 @@ Made by: Kim Bergstroem
 import sys, time, os, requests, gspread
 import time
 from google.oauth2.service_account import Credentials
-from modules.converter import convert_currency
+from modules.converter import display_meny_exchange
 from modules.ascii_art import display_welcome_title, display_welcome_meny # Adds ascii art text headings
 from modules.text_colors import TextColors # Adds color to text
 t = TextColors # Declaring the function to smaller variabel
@@ -23,7 +23,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("travel_Guide")
 
-def welcome_message():
+def welcome_message(): # Welcome Message
     """
     Displaying Welcome Message along with ASCII HEADING
     """
@@ -34,14 +34,17 @@ def welcome_message():
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(0.1)
-    user_name = input(f"{t.bold}Please let me know your name: ")
+    user_name = input(f"{t.bold}Please let me know your name and press return: ")
     print(f"{t.green}{t.bold}Thank you! and welcome once again {user_name} to this Traveling Guide!{t.end}")
     time.sleep(3)
     os.system('clear')
 
 
-def welcome_meny():
-    
+def welcome_meny(): # Welcome Meny
+    """
+    Welcome message for the user
+    User is asked to input their name
+    """
     display_welcome_meny()
     while True:
         user_nav = int(input(f"Enter you number here: "))
@@ -52,20 +55,32 @@ def welcome_meny():
             display_meny_currency_code()
             break
         elif user_nav == 3:
-            convert_currency()
+            os.system('clear')
+            display_meny_exchange()
+            break
+        elif user_nav == 4:
             break
         else:
             print("You choice wrong number, pick again")
 
-def display_meny_country():
+def display_meny_country(): # Country Display
+    """
+    Will display all countries in the world and display the currency in that specific country
+    Will ask user, were to travel
+    """
     print("Were do you want to travel?")
+    welcome_meny()
 
-def display_meny_currency_code():
-    print("What do you want to convert")
+def display_meny_currency_code(): # Country Currency Code
+    """
+    Will display the correct currency code, if user doesnt know the correct 3 letter code
+    """
+    print("Here you have a list of all country currency codes that you can use for exchange")
+    welcome_meny()
 
 
 
-def main():
+def main(): # Main Start Function
     """
     Will run all everything
     """
