@@ -38,7 +38,7 @@ def display_welcome_meny():
 \/    \/\___|_| |_|\__, |{t.end}       {t.magenta}3. Exchange{t.end}{t.yellow}                       |
                    |___/{t.end}        {t.magenta}4. Quit{t.end}{t.yellow}                           |
                                                                   |
-{t.bold}Please enter the number of the meny for enter that topic          |
+{t.bold}Please enter the number of the navigation meny                    |
 {t.end}                                            
     """
     print(welcome_meny)
