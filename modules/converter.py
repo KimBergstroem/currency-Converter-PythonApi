@@ -8,9 +8,9 @@ import requests
 
 def convert_currency():
     while True:
-        init_currency = input('Enter an initial currency: ')
-        target_currency = input('Enter a target currency: ')
-        
+        init_currency = input('Enter Three-letter currency code, you would like to convert from: ')
+        target_currency = input('Enter Three-letter currency code, you would like to convert to: ')
+
         while True:
             try:
                 amount = float(input('Enter the amount: '))
