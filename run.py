@@ -8,7 +8,7 @@ import sys, time, os, requests, gspread
 import time
 from google.oauth2.service_account import Credentials
 from modules.converter import convert_currency
-from modules.ascii_art import display_welcome_title # Adds ascii art text headings
+from modules.ascii_art import display_welcome_title, display_welcome_meny # Adds ascii art text headings
 from modules.text_colors import TextColors # Adds color to text
 t = TextColors # Declaring the function to smaller variabel
 
@@ -36,6 +36,11 @@ def welcome_message():
         time.sleep(0.1)
     user_name = input(f"{t.bold}Please let me know your name: ")
     print(f"{t.green}{t.bold}Thank you! and welcome once again {user_name} to this Traveling Guide!{t.end}")
+    time.sleep(3)
+
+    os.system('clear')
+    display_welcome_meny()
+
 
 def main():
     """

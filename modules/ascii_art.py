@@ -25,3 +25,20 @@ def display_welcome_title():
   {t.end}                                                         
     """
     print(welcome_title)
+
+
+def display_welcome_meny():
+    welcome_meny = f"""  
+ {t.yellow}
+ _________________________________________________________________
+                                                                  |
+  /\/\   ___ _ __  _   _                                          |
+{t.yellow} /    \ / _ \ '_ \| | | |{t.end}       {t.magenta}1. Country{t.end}{t.yellow}                        |
+/ /\/\ \  __/ | | | |_| |{t.end}       {t.magenta}2. Currency code{t.end}{t.yellow}                  |
+\/    \/\___|_| |_|\__, |{t.end}       {t.magenta}3. Exchange{t.end}{t.yellow}                       |
+                   |___/{t.end}        {t.magenta}4. Quit{t.end}{t.yellow}                           |
+                                                                  |
+{t.bold}Please enter the number of the meny for enter that topic          |
+{t.end}                                            
+    """
+    print(welcome_meny)
