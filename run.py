@@ -34,7 +34,7 @@ def welcome_message(): # Welcome Message
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(0.1)
-    user_name = input(f"{t.bold}Please let me know your name and press return: ")
+    user_name = input(f"{t.bold}Please let me know your name and press ENTER: ")
     print(f"{t.green}{t.bold}Thank you! and welcome once again {user_name} to this Traveling Guide!{t.end}")
     time.sleep(3)
     os.system('clear')
@@ -45,8 +45,8 @@ def welcome_meny(): # Welcome Meny
     Welcome message for the user
     User is asked to input their name
     """
-    display_welcome_meny()
     while True:
+        display_welcome_meny()
         user_nav = int(input(f"Enter you number here: "))
         if user_nav == 1:
             display_meny_country()
@@ -57,8 +57,9 @@ def welcome_meny(): # Welcome Meny
         elif user_nav == 3:
             os.system('clear')
             display_meny_exchange()
-            break
+            os.system('clear')
         elif user_nav == 4:
+            print(f"I Hope you enjoyed the Travel Guide! I will se you next time!" )
             break
         else:
             print("You choice wrong number, pick again")
