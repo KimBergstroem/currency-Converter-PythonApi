@@ -18,20 +18,28 @@ def display_meny_exchange():
 
     while True:
         while True:
-            init_currency = input('Enter currency code you would like to convert from: ')
+            init_currency = input('Enter currency code you would like to convert from: ').upper()
             if init_currency in currency_dict:
                 break
             else:
                 print("Sorry, the currency you entered is not in the list. Try again ")
-                show_data = input(f"Do you wanna se the list with available currency codes? ({t.green}y{t.end} / {t.red}n{t.end}): \n")
-                if show_data != "y":
-                    for key, value in currency_dict.items():
-                        print(f"Code: {t.cyan}{key}{t.end} Country: {t.cyan}{value}{t.end}")
-                        print("------------------")
-                else:
-                    continue
+
+                while True:
+                    show_data = input(f"Do you wanna se the list with available currency codes? ({t.green}y{t.end} / {t.red}n{t.end}): \n").upper()
+                    if "N" not in show_data and "Y" not in show_data:
+                        print(f"Please press either {t.green}y{t.end} or {t.red}n{t.end}")
+                    if "Y" in show_data:
+                        for key, value in currency_dict.items():
+                            print(f"Code: {t.cyan}{key}{t.end} Country: {t.cyan}{value}{t.end}")
+                            print("------------------")
+                        break
+                    elif "N" in show_data:
+                        break
+                    else:
+                        continue
+
         while True:
-            target_currency = input('Enter currency code you would like to convert to: ')
+            target_currency = input('Enter currency code you would like to convert to: ').upper()
             if target_currency in currency_dict:
                 break
             else:
@@ -60,14 +68,14 @@ def display_meny_exchange():
         status_code = response.status_code
 
         if status_code != 200:
-            print('Uh oh, there was a problem. Please try again later')
+            print('Uh oh, there was a problem. Please Restart the application and try again later')
             quit()
 
         result = response.json()
         print('Conversion result: ' + str(result['result']))
 
-        repeat = input(f"Do you wanna convert again? ({t.green}y{t.end} / {t.red}n{t.end}): \n")
-        if repeat != "y":
+        repeat = input(f"Do you wanna convert again? ({t.green}y{t.end} / {t.red}n{t.end}): \n").upper()
+        if repeat != "Y" :
             break
         else:
             os.system('clear')

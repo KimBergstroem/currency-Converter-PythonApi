@@ -34,7 +34,7 @@ def welcome_message(): # Welcome Message
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(0.1)
-    user_name = input(f"{t.bold}Please let me know your name and press ENTER: ")
+    user_name = input(f"{t.bold}Please let me know your name and press ENTER: ").capitalize()
     print(f"{t.green}{t.bold}Thank you! and welcome once again {user_name} to this Traveling Guide!{t.end}")
     time.sleep(3)
     os.system('clear')
