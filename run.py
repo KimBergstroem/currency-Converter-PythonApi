@@ -59,7 +59,7 @@ def welcome_meny(): # Welcome Meny
             display_meny_exchange()
             os.system('clear')
         elif user_nav == 4:
-            print(f"I Hope you enjoyed the Travel Guide! I will se you next time!" )
+            print(f"I Hope you enjoyed the Travel Guide! I will se you next time!!" )
             break
         else:
             print("You choice wrong number, pick again")

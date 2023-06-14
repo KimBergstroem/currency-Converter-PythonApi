@@ -22,7 +22,7 @@ def display_meny_exchange():
             if init_currency in currency_dict:
                 break
             else:
-                print("Sorry, the currency you entered is not in the list. Try again")
+                print("Sorry, the currency you entered is not in the list. Try again ")
                 show_data = input(f"Do you wanna se the list with available currency codes? ({t.green}y{t.end} / {t.red}n{t.end}): \n")
                 if show_data != "y":
                     for key, value in currency_dict.items():
