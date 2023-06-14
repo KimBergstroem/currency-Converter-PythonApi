@@ -3,7 +3,8 @@ Currency Converter
 -------------------------------------------------------------
 API from Fixer API - https://apilayer.com/
 '''
-import requests
+import requests, os
+from modules.currency_data import currency_dict
 from modules.ascii_art import display_meny_exchange_title
 from modules.text_colors import TextColors # Adds color to text
 t = TextColors # Declaring the function to smaller variabel
@@ -14,29 +15,28 @@ def display_meny_exchange():
     Compares two - 3 letters currency code with convertion
     """
     display_meny_exchange_title()
+
     while True:
-
         while True:
-            url = "https://api.apilayer.com/currency_data/list"
-            payload = {}
-            headers= {
-                "apikey": "Wyf6JKlmEnpBYW6kzAUSsoo0ptkUz5lr"
-            }
-            response = requests.request("GET", url, headers=headers, data = payload)
-            status_code = response.status_code
-            result_list = response.text
-            if status_code == 200:
-                result_list = response.json()
-                init_currency = input('Enter currency code, you would like to convert from: ')
-                if init_currency in result_list.values():
-                    break
-                else:
-                    print("Sorry, the currency you entered is not in the list. Try again")
+            init_currency = input('Enter currency code you would like to convert from: ')
+            if init_currency in currency_dict:
+                break
             else:
-                print("Failed to retrieve the currency list.")
-
-        target_currency = input('Enter currency code, you would like to convert to: ')
-
+                print("Sorry, the currency you entered is not in the list. Try again")
+                show_data = input(f"Do you wanna se the list with available currency codes? ({t.green}y{t.end} / {t.red}n{t.end}): \n")
+                if show_data != "y":
+                    for key, value in currency_dict.items():
+                        print(f"Code: {t.cyan}{key}{t.end} Country: {t.cyan}{value}{t.end}")
+                        print("------------------")
+                else:
+                    continue
+        while True:
+            target_currency = input('Enter currency code you would like to convert to: ')
+            if target_currency in currency_dict:
+                break
+            else:
+                print("Sorry, the currency you entered is not in the list. Try again")
+                
         while True:
             try:
                 amount = float(input('Enter the amount: '))
@@ -69,6 +69,11 @@ def display_meny_exchange():
         repeat = input(f"Do you wanna convert again? ({t.green}y{t.end} / {t.red}n{t.end}): \n")
         if repeat != "y":
             break
+        else:
+            os.system('clear')
+            display_meny_exchange_title()
+            continue
+
 
 
 if __name__ == '__main__':
