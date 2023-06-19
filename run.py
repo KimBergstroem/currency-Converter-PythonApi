@@ -104,6 +104,19 @@ def validate_name(name):
         return False
     return True
 
+def inputNumber(message):
+    """
+    Validate that user enters correct integer instead of string
+    """
+  while True:
+    try:
+       userInput = int(input(message))       
+    except ValueError:
+       print("Not an integer! Try again.")
+       continue
+    else:
+       return userInput 
+       break 
 
 
 
