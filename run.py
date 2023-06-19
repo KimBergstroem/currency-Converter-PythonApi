@@ -33,10 +33,17 @@ def welcome_message(): # Welcome Message
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(0.1)
-    user_name = input(f"{t.bold}Please let me know your name and press ENTER: ").capitalize()
-    print(f"{t.green}{t.bold}Thank you! and welcome once again {user_name} to this Traveling Guide!{t.end}")
-    time.sleep(3)
-    os.system('clear')
+    while True:
+        user_name = input(f"{t.bold}Please let me know your name and press ENTER: ").capitalize()
+        if validate_name(user_name):
+            print(f"{t.green}{t.bold}Thank you! and welcome once again {user_name} to this Traveling Guide!{t.end}")
+            time.sleep(3)
+            os.system('clear')
+            break
+        else:
+            continue
+    return user_name
+
 
 def welcome_meny(): # Welcome Meny
     """
@@ -90,12 +97,10 @@ def validate_name(name):
         for letter in name:
             if not letter.isalpha():
                 raise ValueError(
-                    "Looks like we can only accept letters from A to Z."
-                    "Please make sure to only enter characters"
-                    "from the alphabet"
+                    "We can only accept letters from A to Z. Please make sure to only enter characters from the alphabet."
                 )
     except ValueError as e:
-        print(f"Obs! {e}. Try asgain!\n")
+        print(f"{t.red}Obs!{t.end} {e} {t.red}Try again!{t.end}\n")
         return False
     return True
 
