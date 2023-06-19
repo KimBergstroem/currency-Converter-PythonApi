@@ -22,7 +22,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("travel_Guide")
 
-def welcome_message(): # Welcome Message
+def welcome_message(): 
     """
     Displaying Welcome Message along with ASCII HEADING
     """
@@ -44,8 +44,7 @@ def welcome_message(): # Welcome Message
             continue
     return user_name
 
-
-def welcome_meny(): # Welcome Meny
+def welcome_meny(): 
     """
     Welcome message for the user
     User is asked to input their name
@@ -71,7 +70,7 @@ def welcome_meny(): # Welcome Meny
                 print(f"Only number 1 to 4 can be chosen!" )
                 continue
 
-def display_meny_country(): # Country Display
+def display_meny_country(): # Alternative 1 in meny - Country Display
     """
     Will display all countries in the world and display the currency in that specific country
     Will ask user, were to travel
@@ -79,12 +78,13 @@ def display_meny_country(): # Country Display
     print("Were do you want to travel?")
     welcome_meny()
 
-def display_meny_currency_code(): # Country Currency Code
+def display_meny_currency_code(): # Alternative 2 in meny - Country Currency Code
     """
     Will display the correct currency code, if user doesnt know the correct 3 letter code
     """
     print("Here you have a list of all country currency codes that you can use for exchange")
     welcome_meny()
+
 
 def validate_name(name):
     """
@@ -106,7 +106,6 @@ def validate_name(name):
         return False
     return True
 
-
 def validate_number(number):
     """
     Validate that user enters correct integer instead of string
@@ -121,8 +120,6 @@ def validate_number(number):
             return userInput 
             break 
          
-
-
 
 def main(): # Main Start Function
     """
