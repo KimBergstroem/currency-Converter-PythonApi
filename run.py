@@ -125,6 +125,7 @@ def main(): # Main Start Function
     """
     Will run all everything
     """
+    system('clear')
     welcome_message()
     welcome_meny()
 
