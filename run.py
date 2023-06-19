@@ -3,7 +3,6 @@ Travel Guide - Currency Converter
 -------------------------------------------------------------
 Made by: Kim Bergstroem
 '''
-
 import sys, time, os, requests, gspread
 import time
 from google.oauth2.service_account import Credentials
@@ -38,7 +37,6 @@ def welcome_message(): # Welcome Message
     print(f"{t.green}{t.bold}Thank you! and welcome once again {user_name} to this Traveling Guide!{t.end}")
     time.sleep(3)
     os.system('clear')
-
 
 def welcome_meny(): # Welcome Meny
     """
@@ -78,6 +76,29 @@ def display_meny_currency_code(): # Country Currency Code
     """
     print("Here you have a list of all country currency codes that you can use for exchange")
     welcome_meny()
+
+def validate_name(name):
+    """
+    Check for a name with 3 or more letters
+    Check for only letters
+    """
+    try:
+        if len(name) < 3:
+            raise ValueError(
+                f"We need a name with at least 3 letters from you and you gave us {len(name)}!"
+            )
+        for letter in name:
+            if not letter.isalpha():
+                raise ValueError(
+                    "Looks like we can only accept letters from A to Z."
+                    "Please make sure to only enter characters"
+                    "from the alphabet"
+                )
+    except ValueError as e:
+        print(f"Obs! {e}. Try asgain!\n")
+        return False
+    return True
+
 
 
 
