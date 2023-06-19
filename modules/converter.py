@@ -4,7 +4,6 @@ Currency Converter
 API from Fixer API - https://apilayer.com/
 '''
 import requests, os
-from run.py import inputNumber
 from modules.currency_data import currency_dict
 from modules.ascii_art import display_meny_exchange_title
 from modules.text_colors import TextColors # Adds color to text

@@ -52,22 +52,24 @@ def welcome_meny(): # Welcome Meny
     """
     while True:
         display_welcome_meny()
-        user_nav = int(input(f"Enter you number here: "))
-        if user_nav == 1:
-            display_meny_country()
-            break
-        elif user_nav == 2:
-            display_meny_currency_code()
-            break
-        elif user_nav == 3:
-            os.system('clear')
-            display_meny_exchange()
-            os.system('clear')
-        elif user_nav == 4:
-            print(f"I Hope you enjoyed the Travel Guide! I will se you next time!!" )
-            break
-        else:
-            print("You choice wrong number, pick again")
+        while True:
+            user_input_int = validate_number(f"Enter you number here: ")            
+            if user_input_int == 1:
+                display_meny_country()
+                break
+            elif user_input_int == 2:
+                display_meny_currency_code()
+                break
+            elif user_input_int == 3:
+                os.system('clear')
+                display_meny_exchange()
+                os.system('clear')
+            elif user_input_int == 4:
+                print(f"I Hope you enjoyed the Travel Guide! I will se you next time!!" )
+                break
+            elif user_input_int > 4 or user_input_int < 1:
+                print(f"Only number 1 to 4 can be chosen!" )
+                continue
 
 def display_meny_country(): # Country Display
     """
@@ -104,19 +106,21 @@ def validate_name(name):
         return False
     return True
 
-def inputNumber(message):
+
+def validate_number(number):
     """
     Validate that user enters correct integer instead of string
     """
-  while True:
-    try:
-       userInput = int(input(message))       
-    except ValueError:
-       print("Not an integer! Try again.")
-       continue
-    else:
-       return userInput 
-       break 
+    while True:
+        try:
+            userInput = int(input(number))       
+        except ValueError:
+            print(f"{t.red}Try again.{t.end} Please choose from 1-4 as the meny shows above!")
+            continue
+        else:
+            return userInput 
+            break 
+         
 
 
 
