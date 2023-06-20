@@ -44,7 +44,7 @@ def welcome_message():
             continue
     return user_name
 
-def welcome_meny(): 
+def welcome_meny(user_name): 
     """
     Welcome message for the user
     User is asked to input their name
@@ -52,7 +52,7 @@ def welcome_meny():
     while True:
         display_welcome_meny()
         while True:
-            user_input_int = validate_number(f"Enter you number here: ")            
+            user_input_int = validate_number(f"Please {t.green}{t.bold}{user_name}{t.end}, Enter your number here and press {t.bold}ENTER{t.end}: ")            
             if user_input_int == 1:
                 display_meny_country()
                 break
@@ -66,9 +66,10 @@ def welcome_meny():
             elif user_input_int == 4:
                 print(f"I Hope you enjoyed the Travel Guide! I will se you next time!!" )
                 break
-            elif user_input_int > 4 or user_input_int < 1:
-                print(f"Only number 1 to 4 can be chosen!" )
-                continue
+            else:
+                if user_input_int > 4 or user_input_int < 1:
+                    print(f"Only number 1 to 4 can be chosen!" )
+                    continue
 
 def display_meny_country(): # Alternative 1 in meny - Country Display
     """
@@ -99,7 +100,7 @@ def validate_name(name):
         for letter in name:
             if not letter.isalpha():
                 raise ValueError(
-                    "We can only accept letters from A to Z. Please make sure to only enter characters from the alphabet."
+                    f"{t.red}We can only accept letters from A to Z.{t.end}"
                 )
     except ValueError as e:
         print(f"{t.red}Obs!{t.end} {e} {t.red}Try again!{t.end}\n")
@@ -125,8 +126,7 @@ def main(): # Main Start Function
     """
     Will run all everything
     """
-    system('clear')
-    welcome_message()
-    welcome_meny()
+    user_name = welcome_message()
+    welcome_meny(user_name)
 
 main()
