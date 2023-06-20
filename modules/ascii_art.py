@@ -21,7 +21,7 @@ def display_welcome_title(): # Welcome Title
  /_\ \ \/ / __| '_ \ / _` | '_ \ / _` |/ _ |                      |
 //__  >  < (__| | | | (_| | | | | (_| |  __/                      |
 \__/ /_/\_\___|_| |_|\__,_|_| |_|\__, |\___|                      |
-                                 |___/   Made by  Kim B           |                   
+                                 |___/   {t.bold}Made by  Kim B{t.end}{t.magenta}           |                   
   {t.end}                                                         
     """
     print(welcome_title)
@@ -38,9 +38,8 @@ def display_welcome_meny(): # Welcome Meny
 \/    \/\___|_| |_|\__, |{t.end}       {t.magenta}3. Exchange{t.end}{t.yellow}                       |
                    |___/{t.end}        {t.magenta}4. Quit{t.end}{t.yellow}                           |
                                                                   |
-{t.bold}Please enter the number of the navigation meny                    |
-{t.end}                                            
-    """
+{t.bold}Enter the number of the navigation meny{t.end}{t.yellow}                           |                                            
+    {t.end}"""
     print(welcome_meny)
 
 
