@@ -22,7 +22,7 @@ def display_meny_exchange():
             if init_currency in currency_dict:
                 break
             else:
-                print("Sorry, the currency you entered is not in the list. Try again ")
+                print(f"{t.red}Sorry, the currency you entered is not in the list. Try again{t.end} ")
 
                 while True:
                     show_data = input(f"Do you wanna se the list with available currency codes? ({t.green}y{t.end} / {t.red}n{t.end}): \n").upper()
@@ -43,17 +43,17 @@ def display_meny_exchange():
             if target_currency in currency_dict:
                 break
             else:
-                print("Sorry, the currency you entered is not in the list. Try again")
+                print(f"{t.red}Sorry, the currency you entered is not in the list. Try again{t.end}")
                 
         while True:
             try:
                 amount = float(input('Enter the amount: '))
             except:
-                print('The amount must be a numeric value!')
+                print(f'{t.red}The amount must be a numeric value!{t.end}')
                 continue
 
             if not amount > 0:
-                print('The amount must be greater than 0')
+                print(f'{t.red}The amount must be greater than 0{t.end}')
                 continue
             else:
                 break
@@ -68,7 +68,7 @@ def display_meny_exchange():
         status_code = response.status_code
 
         if status_code != 200:
-            print('Uh oh, there was a problem. Please Restart the application and try again later')
+            print(f'{t.red}Uh oh, there was a problem. Please Restart the application and try again later{t.end}')
             quit()
 
         result = response.json()

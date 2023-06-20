@@ -34,7 +34,7 @@ def welcome_message():
         sys.stdout.flush()
         time.sleep(0.1)
     while True:
-        user_name = input(f"{t.bold}Please let me know your name and press ENTER: ").capitalize()
+        user_name = input(f"{t.bold}Please let me know your name and press {t.bold}{t.underline}ENTER{t.end}: ").capitalize()
         if validate_name(user_name):
             print(f"{t.green}{t.bold}Thank you! and welcome once again {user_name} to this Traveling Guide!{t.end}")
             time.sleep(3)
@@ -52,7 +52,7 @@ def welcome_meny(user_name):
     while True:
         display_welcome_meny()
         while True:
-            user_input_int = validate_number(f"Please {t.green}{t.bold}{user_name}{t.end}, Enter your number here and press {t.bold}ENTER{t.end}: ")            
+            user_input_int = validate_number(f"Please {t.green}{t.bold}{user_name}{t.end}, Enter your number here and press {t.bold}{t.underline}ENTER{t.end}: ")            
             if user_input_int == 1:
                 display_meny_country()
                 break
@@ -68,7 +68,7 @@ def welcome_meny(user_name):
                 break
             else:
                 if user_input_int > 4 or user_input_int < 1:
-                    print(f"Only number 1 to 4 can be chosen!" )
+                    print(f"{t.red}Only number 1 to 4 can be chosen!{t.end}" )
                     continue
 
 def display_meny_country(): # Alternative 1 in meny - Country Display
@@ -95,7 +95,7 @@ def validate_name(name):
     try:
         if len(name) < 3:
             raise ValueError(
-                f"We need a name with at least 3 letters from you and you gave us {len(name)}!"
+                f"{t.red}Name should contain least 3 letters and you gave us {len(name)}!{t.end}"
             )
         for letter in name:
             if not letter.isalpha():
