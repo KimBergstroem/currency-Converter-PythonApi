@@ -115,7 +115,7 @@ def validate_number(number):
         try:
             userInput = int(input(number))       
         except ValueError:
-            print(f"{t.red}Try again.{t.end} Please choose from 1-4 as the meny shows above!")
+            print(f"{t.red}Try again.{t.end} Please choose from 1-4 as the meny shows above!!")
             continue
         else:
             return userInput 
