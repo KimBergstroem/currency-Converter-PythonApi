@@ -54,7 +54,7 @@ def welcome_meny(user_name):
         while True:
             user_input_int = validate_number(f"Please {t.green}{t.bold}{user_name}{t.end}, Enter your number here and press {t.bold}{t.underline}ENTER{t.end}: ")            
             if user_input_int == 1:
-                display_meny_country()
+                display_meny_country(user_name)
                 break
             elif user_input_int == 2:
                 display_meny_currency_code()
@@ -71,13 +71,18 @@ def welcome_meny(user_name):
                     print(f"{t.red}Only number 1 to 4 can be chosen!{t.end}" )
                     continue
 
-def display_meny_country(): # Alternative 1 in meny - Country Display
+def display_meny_country(user_name): # Alternative 1 in meny - Country Display
     """
     Will display all countries in the world and display the currency in that specific country
     Will ask user, were to travel
     """
-    print("Were do you want to travel?")
-    welcome_meny()
+    #PRINT OUT THE CONTENTS
+    content_worksheet = SHEET.worksheet("content")
+    content_values = content_worksheet.row_values(1) #Which display the different content in the first row
+    content_input = input(f"What content do you want to travel to?")
+    content_message = (f"This Content can be chosen to visist:\n{t.cyan}{t.bold}" + " - ".join(content_values))
+    print(content_message)
+    welcome_meny(user_name)
 
 def display_meny_currency_code(): # Alternative 2 in meny - Country Currency Code
     """

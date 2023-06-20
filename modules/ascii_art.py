@@ -46,15 +46,15 @@ def display_welcome_meny(): # Welcome Meny
 def display_meny_exchange_title(): # Exchange Meny Title
     exchange_title = f"""  
  {t.yellow}
- _________________________________________________________________
-   __          _{t.end}                                       {t.green}_{t.end}          {t.yellow}|
-  /__\_  _____| |__   __ _ _ __   __ _  ___{t.end}           {t.green}| |{t.end}         {t.yellow}|
- /_\ \ \/ / __| '_ \ / _` | '_ \ / _` |/ _ |{t.end}         {t.green}/ __){t.end}        {t.yellow}|
-//__  >  < (__| | | | (_| | | | | (_| |  __/{t.end}         {t.green}\__ \{t.end}        {t.yellow}|
-\__/ /_/\_\___|_| |_|\__,_|_| |_|\__, |\___|{t.end}         {t.green}(   /{t.end}        {t.yellow}|
-                                 |___/{t.end}                {t.green}|_|{t.end}         {t.yellow}| 
-                                                                  |
-{t.bold}Convert your current currency into another one{t.end}                    {t.yellow}|                
+ _____________________________________________________________________
+   __          _{t.end}                                       {t.green}_{t.end}          {t.yellow}    |
+  /__\_  _____| |__   __ _ _ __   __ _  ___{t.end}           {t.green}| |{t.end}         {t.yellow}    |
+ /_\ \ \/ / __| '_ \ / _` | '_ \ / _` |/ _ |{t.end}         {t.green}/ __){t.end}        {t.yellow}    |
+//__  >  < (__| | | | (_| | | | | (_| |  __/{t.end}         {t.green}\__ \{t.end}        {t.yellow}    |
+\__/ /_/\_\___|_| |_|\__,_|_| |_|\__, |\___|{t.end}         {t.green}(   /{t.end}        {t.yellow}    |
+                                 |___/{t.end}                {t.green}|_|{t.end}         {t.yellow}    | 
+                                                                      |
+{t.bold}Convert your current currency into another one{t.end}                    {t.yellow}    |                
   {t.end}                                                         
     """
     print(exchange_title)
