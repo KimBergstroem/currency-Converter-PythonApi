@@ -55,21 +55,21 @@ COMING MORE
 --- 
 
 ## **Program flow**🌎
-The flowchart represents the logic of the travel_Guide application. The program starts by prompting the user to input their name and validates the input to ensure that the name is at least three letters long and contains only letters.
+The flowchart represents the logic of the <b>travel_Guide</b> application. The program starts by prompting the user to input their name and validates the input to ensure that the name is at least three letters long and contains only letters.
 
 If the input is valid, a welcome message is shown briefly and then disappears. 
 The terminal is cleared, and the program proceeds to display the main menu, offering four different options. Each option leads to a different path of choice by user:
 
-1. Country:
+1. <b>Country:</b>
 This path prompts the user with different questions such as "Which content do you want to explore?" and "Which country are you interested in?". The user's inputs are processed using the Google Sheets API. If the inputs are valid string values, the information is saved and compared with existing data in the worksheet. This step ensures the correct currency is displayed for the selected country. The application provides the user with the accurate content, country, and currency information. Once all the necessary information is obtained, the user is prompted to either return to the main menu or perform another country search.
 
-2. Currency code:
+2. <b>Currency code:</b>
 Choosing this path displays a library of all current currency codes automatically in the prompt. If the user is unfamiliar with the three-letter currency codes, they can select this option to view the codes. These codes are necessary for the currency exchange feature. After displaying the currency codes, the program automatically returns the user to the main menu.
 
-3. Currency Exchange:
+3. <b>Currency Exchange:</b>
 This path enables the user to input a currency and an amount to view the exchange rate. The currency exchange is facilitated by an API connected to the application, specifically the "Fixer API". This API provides daily updated rates between different currencies. The user is also presented with the result of the exchange, and if desired, they can choose to exchange another currency. Otherwise, the program asks whether the user wants to perform another currency exchange or return to the main menu.
 
-4. Exit:
+4. <b>Exit:</b>
 Finally, choosing option 4 displays the concluding message and exits the application. The terminal will be closed.
 
 
@@ -79,26 +79,26 @@ Finally, choosing option 4 displays the concluding message and exits the applica
 --- 
 
 ## **Data model**🌎
-The program uses the Google Sheets API to access a Google Sheet that contains the content, country and currency data. The program then saves and compare the placeholders for the user inputs and presents the result information. The program uses input() function to get the user's choices and a series of validation functions to ensure that the user inputs are valid.
+The program uses the <b>Google Sheets API</b> to access a Google Sheet that contains the content, country and currency data. The program then saves and compare the placeholders for the user inputs and presents the result information. The program uses input() function to get the user's choices and a series of validation functions to ensure that the user inputs are valid.
 
-The "Fixer API" is utilized in this application to provide access to real-time and historical exchange rate data for currency conversion purposes. It enables the integration of currency exchange functionality.
+The <b>Fixer API</b> is utilized in this application to provide access to real-time and historical exchange rate data for currency conversion purposes. It enables the integration of currency exchange functionality.
 
-Also, import sys, time, os, requests, gspread in this application. 
+Also, import <b>sys, time, os, requests, gspread</b> in this application. 
 By importing these libraries and modules into the project, I gain access to their respective functionalities and can utilize them for various tasks, such as system interactions, time-related operations, HTTP requests, and Google Sheets integration.
 
 --- 
 
 ## **Technologies used**🌎
 ### **Language**
-- Python 3: primary programming language for the project
-- Html, css and javascript is also used but only manipulated for better UI experience for user.
+- <b>Python 3</b>: primary programming language for the project
+- <b>Html</b>, <b>css</b> and <b>javascript</b> is also used but only manipulated for better UI experience for user.
 
 ### **Programs used**
-- Figma: an online diagramming tool, was used to create flowcharts for the project
-- Gitpod: cloud-based IDE used for version control and writing code
-- Git: version control system used for managing and tracking changes to the project's codebase
-- GitHub: web-based hosting service used for version control and storing the project's code after being pushed from Gitpod
-- Heroku: cloud platform used for deploying and hosting the project's web application
+- [Figma](https://www.figma.com/) an online diagramming tool, was used to create flowcharts for the project
+- [Gitpd](https://gitpod.io/) cloud-based IDE used for version control and writing code
+- [Git](https://git-scm.com/) version control system used for managing and tracking changes to the project's codebase
+- [Github](https://github.com/)  web-based hosting service used for version control and storing the project's code after being pushed from Gitpod
+- [Heroku](https://www.heroku.com/home) cloud platform used for deploying and hosting the project's web application
 
 --- 
 
@@ -129,7 +129,7 @@ The third part is the ending of the story, which is also determined by the user'
 --- 
 
 ## **Validation**🌎
-All string validation have the ".capitalize()" function to prevent any big or small letter errors.
+All string validation have the "<b>.capitalize()</b>" function to prevent any big or small letter errors.
 
 ### **Name validation:**
 - 3 or more letters inserted - OK for user name
@@ -190,7 +190,7 @@ After following these steps, your app should be successfully deployed to Heroku.
 
 ## **Credits**🌎
 
-The development of this project was inspired by various online resources including tutorials from Simplilearn and Digital Ocean, as well as references from websites like W3Schools and GeeksforGeeks. Special credit goes to my mentor for their unwavering support, guidance and valuable feedback throughout the project.
+The inspiration for this project's development came from a range of online resources, including tutorials from Simplilearn and Stack Overflow. Additionally, references from websites like W3Schools and Code Institute's learning platform were utilized. 
 
 - [Learn Learn Scratch Tutorials](https://www.youtube.com/watch?v=u4QmAIoo4i0) for their tutorial on how to include colors in python terminal.
 - [Simplilearn](https://www.simplilearn.com/tutorials/python-tutorial/list-to-string-in-python) for their tutorial on list to string conversion in Python.
