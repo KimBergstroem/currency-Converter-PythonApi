@@ -2,16 +2,28 @@
 
 ![travel_Guide WebbApp](docs/screenshots/readme-travel_guide-banner.png)
 
-<b>Visit the deployed site:</b> [travel_Guide](https://kimbergstroem.github.io/PP3/)
+<b>Visit the deployed site:</b> [travel_Guide](https://travel-guide.herokuapp.com/)
+
+<b>Visit the repo here:</b> [Github PP3](https://github.com/KimBergstroem/PP3)
 
 Do you know what currency are used in that country? Do you know how much your current currency are in that value?
 
-The Currency Exchanger and Travel Quiz is a <b>Python-based 🐍</b> application that allows users to convert between different currencies and also engages them with a fun travel quiz. The application aims to provide a convenient currency conversion tool while offering an enjoyable user experience through a captivating design and travel-related questions.
+The Currency Exchanger and Travel Guide is a , <b>Python-based 🐍</b> application that allows users to convert between different currencies and also engages them with a fun travel experience. The application aims to provide a convenient currency conversion tool while offering an enjoyable user experience through captivating design and travel-related questions.
 
+&nbsp;
+
+![GitHub Badge](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=fff&style=flat)
+![Gitpod Badge](https://img.shields.io/badge/Gitpod-FFAE33?logo=gitpod&logoColor=fff&style=flat)
+![Heroku Badge](https://img.shields.io/badge/Heroku-430098?logo=heroku&logoColor=fff&style=flat)
 
 ![Language uses](https://img.shields.io/github/languages/count/kimbergstroem/PP3)
-![GitHub top language](https://camo.githubusercontent.com/74837de6a05b9a1c4bc511f79c44c2b4eccb6ec8de382295e6cccbfbed1ac6f0/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6d61726b646f776e2d2532333030303030302e7376673f7374796c653d666c61743d6d61726b646f776e266c6f676f436f6c6f723d7768697465)
-![Python](https://camo.githubusercontent.com/a00abd8cea4105fa1cad91f7235d11206b492f51afeb9b23a25d04e8f36935e3/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f507974686f6e2d4646443433423f7374796c653d666f722d7468652d6261646765266c6f676f3d707974686f6e266c6f676f436f6c6f723d626c7565)
+
+![HTML5 Badge](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=flat)
+![CSS3 Badge](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=flat)
+![JSS Badge](https://img.shields.io/badge/JSS-F7DF1E?logo=jss&logoColor=000&style=flat)
+![Python Badge](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=flat)
+![Markdown Badge](https://img.shields.io/badge/Markdown-000?logo=markdown&logoColor=fff&style=flat)
+
 
 --- 
 
@@ -43,30 +55,46 @@ COMING MORE
 --- 
 
 ## **Program flow**🌎
-The flowchart represents the logic of the Bedtime Adventures program. The program starts by prompting the user to input two names and validates the input to ensure that each name is at least three letters long and contains only letters. <br>
-![flowchart](/assets/images/flowchart.jpg)
+The flowchart represents the logic of the travel_Guide application. The program starts by prompting the user to input their name and validates the input to ensure that the name is at least three letters long and contains only letters.
 
-If the input is valid, the program moves on to retrieve the first part of the adventure story from a Google Sheet using the Google Sheets API. The program replaces placeholders in the story text with the two names inputted by the user and presents the story to the user.
+If the input is valid, a welcome message is shown briefly and then disappears. 
+The terminal is cleared, and the program proceeds to display the main menu, offering four different options. Each option leads to a different path of choice by user:
 
-Next, the program prompts the user to make a choice between two options (X or Y) and validates the input to ensure that it is either X or Y. If the input is valid, the program retrieves the corresponding adventure story from the Google Sheet and presents it to the user.
+1. Country:
+This path prompts the user with different questions such as "Which content do you want to explore?" and "Which country are you interested in?". The user's inputs are processed using the Google Sheets API. If the inputs are valid string values, the information is saved and compared with existing data in the worksheet. This step ensures the correct currency is displayed for the selected country. The application provides the user with the accurate content, country, and currency information. Once all the necessary information is obtained, the user is prompted to either return to the main menu or perform another country search.
 
-This process repeats for the third part of the adventure story, where the user is prompted to make another choice between X or Y and the input is validated before retrieving and presenting the final part of the story.
+2. Currency code:
+Choosing this path displays a library of all current currency codes automatically in the prompt. If the user is unfamiliar with the three-letter currency codes, they can select this option to view the codes. These codes are necessary for the currency exchange feature. After displaying the currency codes, the program automatically returns the user to the main menu.
 
-Finally, the program displays the ending of the adventure story based on the user's choices throughout the three parts of the story. 
+3. Currency Exchange:
+This path enables the user to input a currency and an amount to view the exchange rate. The currency exchange is facilitated by an API connected to the application, specifically the "Fixer API". This API provides daily updated rates between different currencies. The user is also presented with the result of the exchange, and if desired, they can choose to exchange another currency. Otherwise, the program asks whether the user wants to perform another currency exchange or return to the main menu.
+
+4. Exit:
+Finally, choosing option 4 displays the concluding message and exits the application. The terminal will be closed.
+
+
+
+![flowchart](docs/screenshots/readme-flow_chart.png)
 
 --- 
 
 ## **Data model**🌎
-The program uses the Google Sheets API to access a Google Sheet that contains the adventure story text. The program then replaces the placeholders for the user names and presents the story to the users. The program uses input() function to get the user's choices and a series of validation functions to ensure that the user inputs are valid.
+The program uses the Google Sheets API to access a Google Sheet that contains the content, country and currency data. The program then saves and compare the placeholders for the user inputs and presents the result information. The program uses input() function to get the user's choices and a series of validation functions to ensure that the user inputs are valid.
+
+The "Fixer API" is utilized in this application to provide access to real-time and historical exchange rate data for currency conversion purposes. It enables the integration of currency exchange functionality.
+
+Also, import sys, time, os, requests, gspread in this application. 
+By importing these libraries and modules into the project, I gain access to their respective functionalities and can utilize them for various tasks, such as system interactions, time-related operations, HTTP requests, and Google Sheets integration.
 
 --- 
 
 ## **Technologies used**🌎
 ### **Language**
 - Python 3: primary programming language for the project
+- Html, css and javascript is also used but only manipulated for better UI experience for user.
 
 ### **Programs used**
-- Lucidchart: an online diagramming tool, was used to create flowcharts for the project
+- Figma: an online diagramming tool, was used to create flowcharts for the project
 - Gitpod: cloud-based IDE used for version control and writing code
 - Git: version control system used for managing and tracking changes to the project's codebase
 - GitHub: web-based hosting service used for version control and storing the project's code after being pushed from Gitpod
@@ -101,28 +129,27 @@ The third part is the ending of the story, which is also determined by the user'
 --- 
 
 ## **Validation**🌎
+All string validation have the ".capitalize()" function to prevent any big or small letter errors.
+
 ### **Name validation:**
-- 3 or more letters inserted - OK for both names
-- Only letters - OK for both names
-- Correct name input - OK for both names
-- Numbers instead of letters - OK, gives correct error message
+- 3 or more letters inserted - OK for user name
+- Only letters - OK for user name
+- Correct name input - OK for user name
+- Numbers instead of letters A-Z - OK, gives correct error message
 - 2 lettters inserted - OK, gives correct error message
-- Name validation for second name input - OK
 
-### **First choice validation:**
-- X - OK
-- Y - OK
-- anything else inserted - OK, gives the correct error message
+### **Main Meny validation:**
+- Chocing 1-4 number: - OK, Takes user to the option entered
+- Trying another number besides the "1-4" - OK, gives correct error message
+- Trying to insert a string instead - OK, gives the correct error message
+- Anything else inserted - OK, gives the correct error message
 
-### **Second choice validation:**
-- X - OK
-- Y - OK
-- anything else inserted - OK, gives the correct error message
+### **Currency code validation:**
+- If putting the 3 letter code - OK, gives the user the option to exchange the currency and know that this currency code exist
+- If putting interger instead of string value - OK, gives the correct error message
+- If putting wrong 3 letters code - OK, gives the correct error message displaying that this code is not an existing currency code
+- Anything else inserted - OK, gives the correct error message
 
-### **Third choice validation:**
-- X - OK
-- Y - OK
-- anything else inserted - OK, gives the correct error message
 
 --- 
 
@@ -165,12 +192,13 @@ After following these steps, your app should be successfully deployed to Heroku.
 
 The development of this project was inspired by various online resources including tutorials from Simplilearn and Digital Ocean, as well as references from websites like W3Schools and GeeksforGeeks. Special credit goes to my mentor for their unwavering support, guidance and valuable feedback throughout the project.
 
+- [Learn Learn Scratch Tutorials](https://www.youtube.com/watch?v=u4QmAIoo4i0) for their tutorial on how to include colors in python terminal.
 - [Simplilearn](https://www.simplilearn.com/tutorials/python-tutorial/list-to-string-in-python) for their tutorial on list to string conversion in Python.
-- [DigitalOcean](https://www.digitalocean.com/community/tutorials/python-remove-spaces-from-string) for their tutorial on removing spaces from a string in Python.
+- [101Computing](https://www.101computing.net/number-only/) for their tutorial on try and except learning.
 - [W3Schools](https://www.w3schools.com/python/ref_string_join.asp) for their tutorial on the `join()` method in Python.
 - [Scaler](https://www.scaler.com/topics/capitalize-in-python/) for their tutorial on capitalizing strings in Python.
-- [GeeksforGeeks](https://www.geeksforgeeks.org/textwrap-text-wrapping-filling-python/) for their tutorial on text wrapping and filling in Python.
-- [Stack Overflow](https://stackoverflow.com/questions/1166317/python-textwrap-library-how-to-preserve-line-breaks), 
+- [Stack Overflow](https://stackoverflow.com/questions/5904969/how-to-print-a-dictionarys-key) for how to display keys, values in formatted form.
+- [Code Institute](https://codeinstitute.net/global/) for checking basic python programming tips and steps.
 - [nkmk](https://note.nkmk.me/en/python-textwrap-wrap-fill-shorten/),  
 - [Scaler](https://www.scaler.com/topics/how-to-clear-screen-in-python/) for their discussions on using the `textwrap` module and clearing the screen in Python.
 
