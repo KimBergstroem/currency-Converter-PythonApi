@@ -7,7 +7,7 @@ import sys, time, os, requests, gspread
 import time
 from google.oauth2.service_account import Credentials
 from modules.converter import display_meny_exchange
-from modules.ascii_art import display_welcome_title, display_welcome_meny # Adds ascii art text headings
+from modules.ascii_art import display_welcome_title, display_welcome_meny, display_meny_country_title # Adds ascii art text headings
 from modules.text_colors import TextColors # Adds color to text
 t = TextColors # Declaring the function to smaller variabel
 
@@ -76,7 +76,7 @@ def display_meny_country(user_name): # Alternative 1 in meny - Country Display
     Will display all countries in the world and display the currency in that specific country
     Will ask user, were to travel
     """
-
+    display_meny_country_title()
     LINE_UP = '\033[1A'     # Module Time function, Move up n(=1) lines
     LINE_CLEAR = '\x1b[2K'  # Module Time function, Erase current line
 
