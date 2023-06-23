@@ -27,30 +27,27 @@ The Currency Exchanger and Travel Guide is a , <b>Python-based 🐍</b> applicat
 
 --- 
 
-## **Table of content**
+## <span id="readme-top">**Table of content**</span>
 
-- [User Story](#user-story)
-- [How to Use Travel Guide](#how-to-use-bedtime-adventures)
-- [Program Flow](#program-flow)
-- [Data Model](#data-model)
-- [Technologies Used](#technologies-used)
-- [Features](#features)
-- [Testing](#testing)
-- [Bugs](#bugs)
-- [Deployment](#deployment)
-- [Credits](#credits)
+- [User Story](#user-story🌎)
+- [How to Use Travel Guide](#how-to-use-travel-guide🌎)
+- [Program Flow](#program-flow🌎)
+- [Data Model](#data-model🌎)
+- [Technologies Used](#technologies-used🌎)
+- [Features](#features🌎)
+- [Testing](#testing🌎)
+- [Deployment](#deployment🌎)
+- [Credits](#credits🌎)
 
 --- 
 
 ## **User story**🌎
-As a user who loves to travel and needs to convert currencies, I want to use the Currency Exchanger and Travel Quiz application to easily convert currencies and enjoy an interactive travel-related experience.
+As a user who loves to travel and needs to convert currencies, I want to use the Currency Exchanger and Travel Guide application to easily convert currencies and enjoy an interactive travel-related experience.
 
 --- 
 
 ## **How to use Travel Guide**🌎
-To get started, simply input the travel destination and also of how much amount of money you will bring with you into the travelling.
-
-COMING MORE
+The app will instantly display the converted amount based on current exchange rates. In addition to currency conversion, the app offers engaging travel-related questions to make your experience enjoyable. Explore destination recommendations, travel tips, for your trip planning. Enjoy the convenience of currency conversion and the excitement of discovering new travel insights with the travel_Guide app.
 
 --- 
 
@@ -95,6 +92,7 @@ By importing these libraries and modules into the project, I gain access to thei
 
 ### **Programs used**
 - [Figma](https://www.figma.com/) an online diagramming tool, was used to create flowcharts for the project
+- [Canva](https://www.canva.com/) an all-in-one design tool that offers a user-friendly platform and a vast array of customizable templates to create professional-grade graphics and visual content
 - [Gitpd](https://gitpod.io/) cloud-based IDE used for version control and writing code
 - [Git](https://git-scm.com/) version control system used for managing and tracking changes to the project's codebase
 - [Github](https://github.com/)  web-based hosting service used for version control and storing the project's code after being pushed from Gitpod
@@ -104,27 +102,20 @@ By importing these libraries and modules into the project, I gain access to thei
 
 ## **Features**🌎
 ### **Existing features**
-This adventure game program prompts users to enter two names and presents them with an adventure story that is divided into three parts. The program checks for errors, such as if the user enters less than three letters or anything other than letters. The error messages are displayed as shown below: <br>
-![name_prompt](/assets/images/3letters.png)
-![only_letters](/assets/images/onlyletters.png)
+The travel_Guide application currently offers the following features:
 
-The program includes a feature that automatically capitalizes the names entered by the user in the adventure story, even if they are inputted in lowercase letters. This provides a more polished and professional appearance to the output text. <br><br>
-At the end of the first part of the story, users are presented with two choices, X or Y. <br>
-![choices](/assets/images/xy.png)
-
-Throughout the story, the names that the user entered at the beginning are used.  <br>
-![user](/assets/images/user_name_in_story.png)
-
-After the user has made a choice, a confirmation message to reassure that the child made a good choice, is displayed as shown below: <br>
-![alt text](/assets/images/choice-confirmation.png)
-
-The second part of the story corresponds to the user's choice. <br>
-The third part is the ending of the story, which is also determined by the user's choices in the previous parts.
+- <b>Currency Conversion:</b> Users can convert between different currencies using the application. By selecting the source currency, target currency, and entering the desired amount, the app provides the converted value based on current exchange rates.
+- <b>Engaging Travel Experience:</b> The app incorporates travel-related questions and trivia, enhancing the user's experience while using the application.
+- <b>Destination Recommendations:</b> Users can explore destination recommendations within the app, aiding them in trip planning and discovery.
+- <b>User-Friendly Design:</b> The application has an intuitive and captivating design, ensuring a pleasant and enjoyable user interface.
 
 ### **Future ideas**
-- More options in story
-- More story lines to follow so you begin with picking a story
-- Possibility to name the teddy bear after the childs favorite teddy bear. 
+Expanded Story Options: Provide more storylines or story options to allow users to select and engage with different narrative paths.
+
+- <b>Personalization:</b> Offer the option for users to name their favorite teddy bear or customize certain aspects of the travel experience to add a personalized touch.
+- <b>More Currency Options:</b> Increase the number of available currencies for conversion, ensuring a wider range of options for users.
+- <b>Enhanced Story Interactions:</b> Develop interactive elements within the storylines, allowing users to make choices that have more significant impacts on the narrative.
+- <b>Improved Validation and Error Handling:</b> Refine the validation and error handling mechanisms to provide more informative and user-friendly error messages in case of incorrect inputs or invalid data.
 
 --- 
 
