@@ -160,7 +160,19 @@ def validate_number(number):
         else:
             return userInput 
             break 
-         
+
+def validate_user_input(question, content_message):
+    while True:
+        user_input = input(question).capitalize()
+        if user_input == "":
+            print(f"{t.red}Please enter a valid input.{t.end}")
+        elif user_input.isnumeric():
+            print(f"{t.red}Please enter a valid input, not a number.{t.end}")
+        elif user_input and user_input in content_message:
+            return user_input
+        else:
+            print(f"{t.red}Sorry, the content you entered is not in the list above. Try again.{t.end}")
+
 
 def main(): # Main Start Function
     """
