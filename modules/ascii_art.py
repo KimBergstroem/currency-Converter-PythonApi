@@ -58,3 +58,20 @@ def display_meny_exchange_title(): # Exchange Meny Title
   {t.end}                                                         
     """
     print(exchange_title)
+
+
+def display_meny_country_title(): # Exchange Meny Title
+    country_title = f"""  
+ {t.yellow}
+ _____________________________________________________________________
+   ___                  _                     ___   ____              |
+  / __\___  _   _ _ __ | |_ _ __ _   _      /' --;^/ ,-_\     \ | /   |
+ / /  / _ \| | | | '_ \| __| '__| | | |    / /--o\ o-\ \ \   --(_)--  |
+/ /__| (_) | |_| | | | | |_| |  | |_| |   /-/-/|o|-|\-\-\|\   / | \   |
+\____/\___/ \__,_|_| |_|\__|_|   \__, |    '`  ` |-|   `` '           |
+                                 |___/           |-|                  |
+                                                 |-|                  |
+{t.bold}Best Travel Guide 2023{t.end}                                            {t.yellow}    |                
+  {t.end}                                                         
+    """
+    print(country_title)
