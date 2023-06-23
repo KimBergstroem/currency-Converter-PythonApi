@@ -72,7 +72,7 @@ def welcome_meny(user_name):
                     continue
 
 def display_meny_country(user_name): # Alternative 1 in meny - Country Display
-     """
+    """
     Will display all countries in the world and display the currency in that specific country
     Will ask user, were to travel
     """
@@ -80,6 +80,7 @@ def display_meny_country(user_name): # Alternative 1 in meny - Country Display
     LINE_UP = '\033[1A'     # Module Time function, Move up n(=1) lines
     LINE_CLEAR = '\x1b[2K'  # Module Time function, Erase current line
 
+    currency_worksheet = SHEET.worksheet("currency")  # Declaring variabel from the worksheet that can be used in the code below
     content_worksheet = SHEET.worksheet("content")   # Declaring variabel from the worksheet that can be used in the code below
     content_keys = content_worksheet.row_values(1) # Which display the different content in the first row
     #content_values = content_worksheet.row_values(1) # Which display the different content in the first row
@@ -94,18 +95,10 @@ def display_meny_country(user_name): # Alternative 1 in meny - Country Display
     content_message = (f"This Content can be chosen to visit: " + f"\n " + f"\n{t.cyan}{t.bold}" + " - ".join(content_keys))
     print(content_message)
     print(" ")
-    while True:
-        user_content = input(f"{t.white}What content in the world are you interested in? Choose a content and press {t.bold}{t.underline}ENTER:{t.end} ").capitalize()
-        if user_content == "":
-            print(f"{t.red}Please enter a valid content.{t.end}")
-        elif user_content.isnumeric():
-            print(f"{t.red}Please enter a valid content, not a number.{t.end}")
-        elif user_content and user_content in content_message:
-            break
-        else:
-            print(f"{t.red}Sorry, the content you entered is not in the list above. Try again.{t.end}")
+    user_content = validation_user_input(f"{t.white}What content in the world are you interested in? Choose a content and press {t.bold}{t.underline}ENTER:{t.end} ", content_message)
 
     key_value = user_content
+
     print(f"This countries can be choosen in the content {t.cyan}{t.bold}{user_content}{t.end}") 
     print(" ")
     if user_content in key_value:
@@ -116,7 +109,8 @@ def display_meny_country(user_name): # Alternative 1 in meny - Country Display
             print(f"{t.cyan}{t.bold}{value}{t.end}") 
     
     print(" ")
-    user_country = input(f"What country in the wonderful content {t.cyan}{t.bold}{user_content}{t.end} would you like to visit? Choose a country and press {t.bold}{t.underline}ENTER:{t.end} ").capitalize()
+    user_country = validation_user_input(f"What country in the wonderful content {t.cyan}{t.bold}{user_content}{t.end} would you like to visit? Choose a country and press {t.bold}{t.underline}ENTER:{t.end} ", column_values)
+    print(f"You have been choosing {t.cyan}{t.bold}{user_content}{t.end} and country {t.cyan}{t.bold}{user_country}{t.end}. Great choice! Do you wanna know the current currency in this country?")
     welcome_meny(user_name)
 
 def display_meny_currency_code(): # Alternative 2 in meny - Country Currency Code
@@ -161,14 +155,17 @@ def validate_number(number):
             return userInput 
             break 
 
-def validate_user_input(question, content_message):
+def validation_user_input(question, valid_values):
+    """
+    Checks and comparing to the worksheet values, keys if user picks right value
+    """
     while True:
         user_input = input(question).capitalize()
         if user_input == "":
             print(f"{t.red}Please enter a valid input.{t.end}")
         elif user_input.isnumeric():
             print(f"{t.red}Please enter a valid input, not a number.{t.end}")
-        elif user_input and user_input in content_message:
+        elif user_input and user_input in valid_values:
             return user_input
         else:
             print(f"{t.red}Sorry, the content you entered is not in the list above. Try again.{t.end}")
