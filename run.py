@@ -72,7 +72,7 @@ def welcome_meny(user_name):
                     continue
 
 def display_meny_country(user_name): # Alternative 1 in meny - Country Display
-    """
+     """
     Will display all countries in the world and display the currency in that specific country
     Will ask user, were to travel
     """
@@ -94,7 +94,17 @@ def display_meny_country(user_name): # Alternative 1 in meny - Country Display
     content_message = (f"This Content can be chosen to visit: " + f"\n " + f"\n{t.cyan}{t.bold}" + " - ".join(content_keys))
     print(content_message)
     print(" ")
-    user_content = input(f"{t.white}What content in the world are you interested in? Choose a content and press {t.bold}{t.underline}ENTER:{t.end} ").capitalize()
+    while True:
+        user_content = input(f"{t.white}What content in the world are you interested in? Choose a content and press {t.bold}{t.underline}ENTER:{t.end} ").capitalize()
+        if user_content == "":
+            print(f"{t.red}Please enter a valid content.{t.end}")
+        elif user_content.isnumeric():
+            print(f"{t.red}Please enter a valid content, not a number.{t.end}")
+        elif user_content and user_content in content_message:
+            break
+        else:
+            print(f"{t.red}Sorry, the content you entered is not in the list above. Try again.{t.end}")
+
     key_value = user_content
     print(f"This countries can be choosen in the content {t.cyan}{t.bold}{user_content}{t.end}") 
     print(" ")
