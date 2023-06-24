@@ -34,10 +34,10 @@ def display_meny_country(): # Alternative 1 in meny - Country Display
     content_keys = content_worksheet.row_values(1)      # Which display the different content in the first row
 
     #PRINT OUT THE CONTENTS
-    print(f"{t.yellow}{t.bold}Let us help you decide were you want to travel with a small questionare!{t.end} ")
+    print(f"{t.bold}Let us help you decide were you want to travel with a small questionare!{t.end} ")
     time.sleep(5)
     print(LINE_UP, end=LINE_CLEAR)
-    print(f"{t.yellow}{t.bold}Where do you WANT to travel to? What content? Warm or Cold weather? City or Island?{t.end} ")
+    print(f"{t.bold}Where do you WANT to travel to? What content? {t.red}{t.bold}Warm{t.end} {t.bold}or {t.blue}{t.bold}Cold{t.end}{t.bold} weather? City or Island?{t.end} ")
     time.sleep(5)
     print(LINE_UP, end=LINE_CLEAR)
     content_message = (f"This Content can be chosen to visit: " + f"\n " + f"\n{t.cyan}{t.bold}" + " - ".join(content_keys))
@@ -58,9 +58,7 @@ def display_meny_country(): # Alternative 1 in meny - Country Display
     
     print(" ")
     user_country = validation_user_input(f"What country in the wonderful content {t.cyan}{t.bold}{user_content}{t.end} would you like to visit? Choose a country and press {t.bold}{t.underline}ENTER:{t.end} ", column_values)
-    user_saved_data = input(f"You have been choosing {t.cyan}{t.bold}{user_content}{t.end} and country {t.cyan}{t.bold}{user_country}{t.end}. Great choice!")
-
-    print(f"In this {t.cyan}{t.bold}{user_country}{t.end} the currency ")
+    user_saved_data = input(f"You have been choosing {t.cyan}{t.bold}{user_content}{t.end} and country {t.cyan}{t.bold}{user_country}{t.end}. Great choice! Press {t.bold}{t.underline}ENTER{t.end} to continue:")
 
     key_value = currency_worksheet.col_values(1, 1)   # Get the value of the first cell in the first row (assuming it contains "country").
     num_rows = len(currency_worksheet.col_values(1))  # Get the total number of rows in the worksheet.
@@ -74,10 +72,12 @@ def display_meny_country(): # Alternative 1 in meny - Country Display
         if country == user_country:
             found = True
             row_values = currency_worksheet.row_values(i)
-            print(f"Currency:" + f"\n{t.cyan}{t.bold}" + " - ".join(row_values))
+            print(f"In the country {t.cyan}{t.bold}{user_country}{t.end} they are using the currency " + f"\n{t.cyan}{t.bold}" + " - ".join(row_values))
             break
     if not found:
         print("Country not found.")
+    
+    user_input_choice = input("Do you want to try another travel destination, or do you want to go back to main meny?")
        
 
 def validation_user_input(question, valid_values):
