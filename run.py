@@ -76,14 +76,13 @@ def display_meny_country(user_name): # Alternative 1 in meny - Country Display
     Will display all countries in the world and display the currency in that specific country
     Will ask user, were to travel
     """
-    display_meny_country_title()
+
     LINE_UP = '\033[1A'     # Module Time function, Move up n(=1) lines
     LINE_CLEAR = '\x1b[2K'  # Module Time function, Erase current line
 
-    currency_worksheet = SHEET.worksheet("currency")  # Declaring variabel from the worksheet that can be used in the code below
-    content_worksheet = SHEET.worksheet("content")   # Declaring variabel from the worksheet that can be used in the code below
-    content_keys = content_worksheet.row_values(1) # Which display the different content in the first row
-    #content_values = content_worksheet.row_values(1) # Which display the different content in the first row
+    currency_worksheet = SHEET.worksheet("currency")    # Declaring variabel from the worksheet that can be used in the code below
+    content_worksheet = SHEET.worksheet("content")      # Declaring variabel from the worksheet that can be used in the code below
+    content_keys = content_worksheet.row_values(1)      # Which display the different content in the first row
 
     #PRINT OUT THE CONTENTS
     print(f"{t.yellow}{t.bold}Let us help you decide were you want to travel with a small questionare!{t.end} ")
@@ -102,15 +101,34 @@ def display_meny_country(user_name): # Alternative 1 in meny - Country Display
     print(f"This countries can be choosen in the content {t.cyan}{t.bold}{user_content}{t.end}") 
     print(" ")
     if user_content in key_value:
-        first_row_values = content_worksheet.row_values(1)              # 3. Creating another variabel for displaying all the worksheets first row values "africa","america","asia","europa"
-        column_index = first_row_values.index(key_value) + 1            # 4. Creating another variabel for checking our first row values for the key heading variabel we are searching for. We use + 1 becouse the first column are [0]
-        column_values = content_worksheet.col_values(column_index)      # 5. We create another variabel that will be assigned the first column and all that values that are in the same column, in this case "Africa".
-        for value in column_values:                                     # 7. Using a loop, we iterate through each value in column_values, printing each value to the terminal.
+        first_row_values = content_worksheet.row_values(1)              # 1. Creating another variabel for displaying all the worksheets first row values "africa","america","asia","europa"
+        column_index = first_row_values.index(key_value) + 1            # 2. Creating another variabel for checking our first row values for the key heading variabel we are searching for. We use + 1 becouse the first column are [0]
+        column_values = content_worksheet.col_values(column_index)      # 3. We create another variabel that will be assigned the first column and all that values that are in the same column, in this case "Africa".
+        for value in column_values:                                     # 4. Using a loop, we iterate through each value in column_values, printing each value to the terminal.
             print(f"{t.cyan}{t.bold}{value}{t.end}") 
     
     print(" ")
     user_country = validation_user_input(f"What country in the wonderful content {t.cyan}{t.bold}{user_content}{t.end} would you like to visit? Choose a country and press {t.bold}{t.underline}ENTER:{t.end} ", column_values)
-    print(f"You have been choosing {t.cyan}{t.bold}{user_content}{t.end} and country {t.cyan}{t.bold}{user_country}{t.end}. Great choice! Do you wanna know the current currency in this country?")
+    user_saved_data = input(f"You have been choosing {t.cyan}{t.bold}{user_content}{t.end} and country {t.cyan}{t.bold}{user_country}{t.end}. Great choice!")
+
+    print(f"In this {t.cyan}{t.bold}{user_country}{t.end} the currency ")
+
+    key_value = currency_worksheet.col_values(1, 1)   # Get the value of the first cell in the first row (assuming it contains "country").
+    num_rows = len(currency_worksheet.col_values(1))  # Get the total number of rows in the worksheet.
+
+    found = False  # Flag to check if the user_country is found in the worksheet.
+
+    # Iterate over the rows starting from the second row (index 1).
+    for i in range(1, num_rows):
+        country = currency_worksheet.cell(i, 1).value # Get the value of the cell in the current row and the country column.
+
+        if country == user_country:
+            found = True
+            row_values = currency_worksheet.row_values(i)
+            print(f"Currency:" + f"\n{t.cyan}{t.bold}" + " - ".join(row_values))
+            break
+    if not found:
+        print("Country not found.")
     welcome_meny(user_name)
 
 def display_meny_currency_code(): # Alternative 2 in meny - Country Currency Code
