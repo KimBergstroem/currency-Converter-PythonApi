@@ -191,6 +191,7 @@ The inspiration for this project's development came from a range of online resou
 - [Stack Overflow](https://stackoverflow.com/questions/5904969/how-to-print-a-dictionarys-key) for how to display keys, values in formatted form.
 - [Code Institute](https://codeinstitute.net/global/) for checking basic python programming tips and steps.
 - [ItNext.io](https://itnext.io/overwrite-previously-printed-lines-4218a9563527) for learning line clearing and line removing with import time.
+- [Gspread](https://docs.gspread.org/en/latest/) Library documentation - How to access cells and values in Google Sheets.
 - [nkmk](https://note.nkmk.me/en/python-textwrap-wrap-fill-shorten/),  
 - [Scaler](https://www.scaler.com/topics/how-to-clear-screen-in-python/) for their discussions on using the `textwrap` module and clearing the screen in Python.
 
