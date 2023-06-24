@@ -64,13 +64,13 @@ def display_meny_country_title(): # Exchange Meny Title
     country_title = f"""  
  {t.yellow}
  _____________________________________________________________________
-   ___                  _                     ___   ____              |
-  / __\___  _   _ _ __ | |_ _ __ _   _      /' --;^/ ,-_\     \ | /   |
- / /  / _ \| | | | '_ \| __| '__| | | |    / /--o\ o-\ \ \   --(_)--  |
-/ /__| (_) | |_| | | | | |_| |  | |_| |   /-/-/|o|-|\-\-\|\   / | \   |
-\____/\___/ \__,_|_| |_|\__|_|   \__, |    '`  ` |-|   `` '           |
-                                 |___/           |-|                  |
-                                                 |-|                  |
+   ___                  _                     {t.green}___   ____{t.end}              {t.yellow}|
+  / __\___  _   _ _ __ | |_ _ __ _   _      {t.green}/' --;^/ ,-_\{t.end}     {t.yellow}\ | /   |
+ / /  / _ \| | | | '_ \| __| '__| | | |    {t.green}/ /--o\ o-\ \ \{t.end}   {t.yellow}--(_)--  |
+/ /__| (_) | |_| | | | | |_| |  | |_| |   {t.green}/-/-/|o{t.end}{t.white}|-|{t.end}{t.green}\-\-\|\   {t.yellow}/ | \   |
+\____/\___/ \__,_|_| |_|\__|_|   \__, |    {t.green}'`  `{t.end}{t.white} |-|{t.end}{t.green}   `` '{t.end} {t.yellow}          |
+                                 |___/           {t.white}|-|{t.end}                  {t.yellow}|
+                                                 {t.white}|-|{t.end}                  {t.yellow}|
 {t.bold}Best Travel Guide 2023{t.end}                                            {t.yellow}    |                
   {t.end}                                                         
     """
