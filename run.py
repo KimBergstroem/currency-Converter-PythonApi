@@ -84,6 +84,8 @@ def display_meny_country(user_name): # Alternative 1 in meny - Country Display
     content_worksheet = SHEET.worksheet("content")      # Declaring variabel from the worksheet that can be used in the code below
     content_keys = content_worksheet.row_values(1)      # Which display the different content in the first row
 
+    os.system('clear')
+    display_meny_country_title()
     #PRINT OUT THE CONTENTS
     print(f"{t.yellow}{t.bold}Let us help you decide were you want to travel with a small questionare!{t.end} ")
     time.sleep(5)
