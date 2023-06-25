@@ -42,7 +42,19 @@ The Currency Exchanger and Travel Guide is a , <b>Python-based 🐍</b> applicat
 --- 
 
 ## **User story**🌎
-As a user who loves to travel and needs to convert currencies, I want to use the Currency Exchanger and Travel Guide application to easily convert currencies and enjoy an interactive travel-related experience.
+
+### First Time Visitor Goals
+* <b>As a first-time visitor</b>, I want to be greeted with a welcoming message and an engaging UX style,to set the tone for my experience.
+* <b>As a first-time visitor</b>, I want to be presented with a menu of options to explore, such as choosing a destination country or accessing currency conversion information.
+* <b>As a first-time visitor</b>, I want to select a destination country and see the currency used in that country, providing me with valuable information for my travels.
+* <b>As a first-time visitor</b>, I want to have the option to view a list of currency codes for different countries to help me with currency exchange.
+
+### Returning Visitor Goals
+* <b>As a returning visitor</b>, I want to quickly access the travel guide without having to go through the initial welcome and name input process.
+* <b>As a returning visitor</b>, I want to explore different options in the menu, such as choosing a new destination country or reviewing currency conversion details.
+* <b>As a returning visitor</b>, I want to check the currency code for a specific country without having to navigate through the entire travel guide.
+* <b>As a returning visitor</b>, I want to compare currency exchange rates and perform currency conversions for different countries I'm interested in.
+* <b>As a returning visitor</b>, I want to have an enjoyable and visually appealing experience with captivating design and engaging travel-related questions.
 
 --- 
 
@@ -120,7 +132,7 @@ Expanded Story Options: Provide more storylines or story options to allow users 
 --- 
 
 ## **Validation**🌎
-All string validation have the "<b>.capitalize()</b>" function to prevent any big or small letter errors.
+All string validation have the "<b>.capitalize()</b>" or "<b>.upper()</b>" function to prevent any big or small letter errors.
 
 ### **Name validation:**
 - 3 or more letters inserted - OK for user name
@@ -141,10 +153,48 @@ All string validation have the "<b>.capitalize()</b>" function to prevent any bi
 - If putting wrong 3 letters code - OK, gives the correct error message displaying that this code is not an existing currency code
 - Anything else inserted - OK, gives the correct error message
 
+### **All other input int/string validation:**
+- blablablablabl
+
 
 --- 
 
 ## **Testing**🌎
+
+### Testing User Stories
+
+**`First Time Visitors`**
+
+| First Time User Goals | How this was achieved | Screenshot |
+| --- | --- | --- |
+| As a user, my objective is to discover the instructions on how to play the game in order to enhance my gameplay efficiency. | The game has a "rules" page popup which can be accessed by clicking on the "rules" button on the main page. | <details><summary>Screenshot of result</summary>![Result](docs/user-stories/userstories-rulespopup.png)</details> |
+| As a user, I desire the ability to validate the correctness of my answers, thereby increasing my score. | When a user clicks on the answer buttons, a visual indication is provided by changing the color of the button. If the selected answer is correct, the button turns green; otherwise, it turns red. | <details><summary>Screenshot of result</summary>![Result](docs/user-stories/userstories-correctanswer.png)</details> |
+| As a user, I would like to have visibility of the remaining time so that I can maintain a suitable pace during gameplay and avoid running out of time. | The user is provided with a countdown timer that is visible during their gameplay. The countdown timer also changes color depending on the urgency of time left. | <details><summary>Screenshot of result</summary>![Result](docs/user-stories/userstories-timer.png)</details> |
+| As a user, I would like to view my final score at the end of the game in order to see my performance on the scoreboard and dashboard. | Upon completion of the game, the user is presented with their score along with a performance message that reflects their performance, varying based on how well or poorly they performed. | <details><summary>Screenshot of result</summary>![Result](docs/user-stories/userstories-score.png)</details> |
+| As a user, I want to be able to cancel the game at any time during play if I do not want to continue. | Upon completion of the game, the user is presented with a quit icon displayed in the upper right corner of the quiz game. By clicking this icon, the user is taken back to the main menu, exiting and resetting the game. | <details><summary>Screenshot of result</summary>![Result](docs/user-stories/userstories-exitbutton.png)</details> |
+
+
+**`Returning Visitors`**
+
+| Returning User Goals | How this was achieved | Screenshot |
+| --- | --- | --- |
+| Review past scores | Returning users can access the dashboard that displays their previous quiz scores and username. They can view their improvement over time and compare their scores with other users. | <details><summary>Screenshot of result</summary>![Result](docs/user-stories/userstories-highscore.png)</details> |
+| Engage in competitive challenge | The quiz game offers leaderboard functionality where returning users can compete with other players to achieve high scores. | <details><summary>Screenshot of result</summary>![Result](docs/user-stories/userstories-leaderboard.png)</details> |
+| Play multiple times without limitations | Users, whether new or returning, have the freedom to play the quiz game multiple times. There are no restrictions on the number of attempts, allowing users to enjoy the game, improve their scores, and challenge themselves without limitations. | <details><summary>Screenshot of result</summary>![Result](docs/user-stories/userstories-playagain.png)</details> |
+
+&nbsp;
+
+Family and friends tested my game on their devices no issues were reported.
+
+The scores below are the average results obtained from three users who attempted the following.
+ 
+|Test|Result  |
+|--|--|
+|Obtain the welcome message try the name input validation |**100%**|
+|In the main meny, try to select an option that is not in the meny, validation |**100%**  |
+|In the convert exchange function, try to convert with different amount |**100%**|
+|Try the validation on the currency converting |**100%**|
+|Try the Enter blank space validation on all input |**100%**|
 
 &nbsp;
 ### **Solved Bugs**
