@@ -5,6 +5,7 @@ API from Fixer API - https://apilayer.com/
 '''
 import requests
 import os
+import dotenv
 from modules.currency_data import currency_dict
 from modules.ascii_art import display_meny_exchange_title
 from modules.text_colors import TextColors # Adds color to text
@@ -64,8 +65,10 @@ def display_meny_exchange():
                 + target_currency + '&from=' + init_currency +
                 '&amount=' + str(amount))
 
+        dotenv.load_dotenv()
+        api_key = os.getenv('API_KEY')
         payload = {}
-        headers = {'apikey': 'Wyf6JKlmEnpBYW6kzAUSsoo0ptkUz5lr'}
+        headers = {'apikey': api_key}
         response = requests.request('GET', url, headers=headers, data=payload)
         status_code = response.status_code
 

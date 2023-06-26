@@ -7,7 +7,8 @@ import sys
 import time
 import os
 import requests
-import gspread 
+import gspread
+import dotenv
 from gspread.exceptions import APIError
 from google.oauth2.service_account import Credentials
 from modules.currency_data import currency_dict
@@ -79,7 +80,7 @@ def welcome_meny(user_name):
             print(f"I Hope you enjoyed this {t.green}{t.bold}Travel Guide{t.end}! I will see you next time!!{t.end}")
             time.sleep(6)
             os.system('clear')
-            break
+            quit()
         else:
             if user_input_int > 4 or user_input_int < 1:
                 print(f"{t.red}Only number 1 to 4 can be chosen!{t.end}")
