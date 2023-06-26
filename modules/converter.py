@@ -69,7 +69,10 @@ def display_meny_exchange():
 
         if status_code != 200:
             print(f'{t.red}Uh oh, there was a problem. Please Restart the application and try again later{t.end}')
-            
+
+        result = response.json()
+        print('Conversion result: ' + str(result['result']))
+        
         while True:
             repeat = input(f"Do you wanna convert again? ({t.green}Y{t.end} / {t.red}N{t.end}): \n").upper()
             if "N" not in repeat and "Y" not in repeat:
