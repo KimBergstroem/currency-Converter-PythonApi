@@ -160,7 +160,7 @@ def display_meny_currency_code(user_name): # Alternative 2 in meny - Country Cur
     """
     Will display the correct currency code, if user doesnt know the correct 3 letter code
     """
-    display_meny_currency_code_title(user_name)
+    display_meny_currency_code_title()
     time.sleep(1)
     message = (f"Here you will find a list with all 3 Letters codes and country! \nBe sure to scroll {t.bold}up{t.end} and {t.bold}down{t.end} to get full overview over the list!\n")
     for char in message:
