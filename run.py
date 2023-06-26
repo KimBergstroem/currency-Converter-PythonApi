@@ -174,7 +174,13 @@ def display_meny_currency_code(user_name): # Alternative 2 in meny - Country Cur
         time.sleep(0.08)
         if i == 100:
             print(f" {t.white}{t.bold} - Complete{t.end}")
-
+    print(" ")
+    print(f"{t.bold}Checkout the list below:{t.end}")
+    time.sleep(2.5)
+    print(" ")
+    for key, value in currency_dict.items():
+        print(f"Code: {t.cyan}{t.bold}{key}{t.end} Country: {t.cyan}{t.bold}{value}{t.end}")
+        print("------------------")
 
 '''
 ################### Validation functions #########################
