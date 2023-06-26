@@ -169,6 +169,11 @@ def display_meny_currency_code(user_name): # Alternative 2 in meny - Country Cur
     print("Reloading the list, please wait")
     time.sleep(2)
     print(" ")
+    for i in range(101):
+        print('\r', str(i), end = '%')
+        time.sleep(0.08)
+        if i == 100:
+            print(f" {t.white}{t.bold} - Complete{t.end}")
 
 
 '''
