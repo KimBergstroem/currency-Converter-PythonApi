@@ -27,7 +27,7 @@ def display_meny_exchange():
                 while True:
                     show_data = input(f"Do you wanna se the list with available currency codes? ({t.green}y{t.end} / {t.red}n{t.end}): \n").upper()
                     if "N" not in show_data and "Y" not in show_data:
-                        print(f"Please press either {t.green}y{t.end} or {t.red}n{t.end}")
+                        print(f"{t.red}Please press either Y or N{t.end}")
                     if "Y" in show_data:
                         for key, value in currency_dict.items():
                             print(f"Code: {t.cyan}{key}{t.end} Country: {t.cyan}{value}{t.end}")
@@ -69,15 +69,15 @@ def display_meny_exchange():
 
         if status_code != 200:
             print(f'{t.red}Uh oh, there was a problem. Please Restart the application and try again later{t.end}')
-
-        result = response.json()
-        print('Conversion result: ' + str(result['result']))
+        else:
+            result = response.json()
+            print('Conversion result: ' + str(result['result']))
         
         while True:
             repeat = input(f"Do you wanna convert again? ({t.green}Y{t.end} / {t.red}N{t.end}): \n").upper()
             if "N" not in repeat and "Y" not in repeat:
                 print(f'{t.red}Please press either "Y" for YES or "N" for NO{t.end}')
-            if repeat == "N" :
+            if repeat == "N":
                 print(f"You are redirected back to main menu, wait a second")
                 return repeat
             elif repeat == "Y":
