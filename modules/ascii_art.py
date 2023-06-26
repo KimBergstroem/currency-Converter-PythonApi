@@ -33,12 +33,12 @@ def display_welcome_meny(): # Welcome Meny
  _____________________________________________________________________
                                                                       |
   /\/\   ___ _ __  _   _                                              |
-{t.yellow} /    \ / _ \ '_ \| | | |{t.end}       {t.magenta}{t.bold}1. Country{t.end}{t.yellow}                            |
-/ /\/\ \  __/ | | | |_| |{t.end}       {t.magenta}{t.bold}2. Currency code{t.end}{t.yellow}                      |
-\/    \/\___|_| |_|\__, |{t.end}       {t.magenta}{t.bold}3. Exchange{t.end}{t.yellow}                           |
+{t.yellow} /    \ / _ \ '_ \| | | |{t.end}       {t.magenta}{t.bold}1. Country tips{t.end}{t.yellow}                       |
+/ /\/\ \  __/ | | | |_| |{t.end}       {t.magenta}{t.bold}2. Currency codes{t.end}{t.yellow}                     |
+\/    \/\___|_| |_|\__, |{t.end}       {t.magenta}{t.bold}3. Exchange service{t.end}{t.yellow}                   |
                    |___/{t.end}        {t.magenta}{t.bold}4. Quit{t.end}{t.yellow}                               |
                                                                       |
-{t.bold}Enter the number of the navigation meny{t.end}{t.yellow}                               |                                            
+{t.bold}Enter the number of the navigation menu{t.end}{t.yellow}                               |                                            
     {t.end}"""
     print(welcome_meny)
 
