@@ -2,6 +2,8 @@
 Text Color - That can change color text format
 -------------------------------------------------------------
 '''
+
+
 class TextColors:
     red = "\u001b[0;31m"
     green = "\u001b[0;32m"
@@ -14,3 +16,4 @@ class TextColors:
     bold = "\u001b[1m"
     inverse = "\u001b[7m"
     end = "\u001b[0m"
+    
