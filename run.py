@@ -6,6 +6,7 @@ Made by: Kim Bergstroem
 import sys, time, os, requests, gspread
 import time
 from google.oauth2.service_account import Credentials
+from modules.currency_data import currency_dict
 from modules.converter import display_meny_exchange
 from modules.ascii_art import display_welcome_title, display_welcome_meny, display_meny_country_title # Adds ascii art text headings
 from modules.text_colors import TextColors # Adds color to text
