@@ -59,7 +59,7 @@ The Currency Exchanger and Travel Guide is a , <b>Python-based 🐍</b> applicat
 --- 
 
 ## **How to use Travel Guide**🌎
-The app will instantly display the converted amount based on current exchange rates. In addition to currency conversion, the app offers engaging travel-related questions to make your experience enjoyable. Explore destination recommendations, travel tips, for your trip planning. Enjoy the convenience of currency conversion and the excitement of discovering new travel insights with the travel_Guide app.
+The app will instantly display the converted amount based on current exchange rates. In addition to currency conversion, the app offers engaging travel-related questions to make your experience enjoyable. Explore destination recommendations, travel tips, for your trip planning. Enjoy the convenience of currency conversion and the excitement of discovering new travel insights with the <b>travel_Guide</b> app.
 
 --- 
 
@@ -114,7 +114,7 @@ By importing these libraries and modules into the project, I gain access to thei
 
 ## **Features**🌎
 ### **Existing features**
-The travel_Guide application currently offers the following features:
+The <b>travel_Guide</b> application currently offers the following features:
 
 - <b>Currency Conversion:</b> Users can convert between different currencies using the application. By selecting the source currency, target currency, and entering the desired amount, the app provides the converted value based on current exchange rates.
 - <b>Engaging Travel Experience:</b> The app incorporates travel-related questions and trivia, enhancing the user's experience while using the application.
@@ -122,39 +122,50 @@ The travel_Guide application currently offers the following features:
 - <b>User-Friendly Design:</b> The application has an intuitive and captivating design, ensuring a pleasant and enjoyable user interface.
 
 ### **Future ideas**
-Expanded Story Options: Provide more storylines or story options to allow users to select and engage with different narrative paths.
+Expanded features Options: Provide more storylines or story options to allow users to select and engage with different narrative paths.
 
-- <b>Personalization:</b> Offer the option for users to name their favorite teddy bear or customize certain aspects of the travel experience to add a personalized touch.
-- <b>More Currency Options:</b> Increase the number of available currencies for conversion, ensuring a wider range of options for users.
-- <b>Enhanced Story Interactions:</b> Develop interactive elements within the storylines, allowing users to make choices that have more significant impacts on the narrative.
+- <b>Personalization:</b> Offer the option for users to name their travel destination or customize certain aspects of the travel experience to add a personalized touch.
+- <b>Enhanced Story Interactions:</b> Develop interactive elements within the storylines, allowing users to make choices that have more significant impacts on the narrative, example fly ticket prices, how much can you get in that country with 1 euro converted to the countrys value.
 - <b>Improved Validation and Error Handling:</b> Refine the validation and error handling mechanisms to provide more informative and user-friendly error messages in case of incorrect inputs or invalid data.
+- <b>Save data:</b> Give user the option to save data into the worksheet, with personal traveling tips or information to go back to.
 
 --- 
 
 ## **Validation**🌎
-All string validation have the "<b>.capitalize()</b>" or "<b>.upper()</b>" function to prevent any big or small letter errors.
+All string validations have the <b>`.capitalize()`</b> or <b>`.upper()`</b> function to prevent any big or small letter errors.
 
 ### **Name validation:**
-- 3 or more letters inserted - OK for user name
-- Only letters - OK for user name
-- Correct name input - OK for user name
+- 3 or more letters inserted - OK for username
+- Only letters - OK for username
+- Correct name input - OK for username
 - Numbers instead of letters A-Z - OK, gives correct error message
-- 2 lettters inserted - OK, gives correct error message
+- 2 letters inserted - OK, gives correct error message
 
-### **Main Meny validation:**
-- Chocing 1-4 number: - OK, Takes user to the option entered
-- Trying another number besides the "1-4" - OK, gives correct error message
+### **Main Menu validation:**
+- Choosing 1-4 number: - OK, takes user to the option entered
+- Trying another number besides "1-4" - OK, gives correct error message
 - Trying to insert a string instead - OK, gives the correct error message
 - Anything else inserted - OK, gives the correct error message
 
 ### **Currency code validation:**
-- If putting the 3 letter code - OK, gives the user the option to exchange the currency and know that this currency code exist
-- If putting interger instead of string value - OK, gives the correct error message
-- If putting wrong 3 letters code - OK, gives the correct error message displaying that this code is not an existing currency code
+- If putting the 3-letter code - OK, gives the user the option to exchange the currency and know that this currency code exists
+- If putting an integer instead of a string value - OK, gives the correct error message
+- If putting the wrong 3-letter code - OK, gives the correct error message displaying that this code is not an existing currency code
 - Anything else inserted - OK, gives the correct error message
 
-### **All other input int/string validation:**
-- blablablablabl
+### **Data search to worksheet validation:**
+- If putting the correct content/country string value - OK, gives the user information that this content/country exists.
+- If putting an integer instead of a string value - OK, gives the correct error message
+- If putting a blank space - OK, gives the correct error message
+- Anything else inserted - OK, gives the correct error message
+
+### **All (Y)es or (N)o question validation:**
+- If jused with an IF statement as below code: &nbsp;
+
+    `if` "N" `not in` "variable" `and` "Y" `not in` "variable":
+    `print('Please press either "Y" for YES or "N" for NO')`
+
+
 
 
 --- 
@@ -163,24 +174,24 @@ All string validation have the "<b>.capitalize()</b>" or "<b>.upper()</b>" funct
 
 ### Testing User Stories
 
-**`First Time Visitors`**
+**First Time Visitors**
 
-| First Time User Goals | How this was achieved | Screenshot |
-| --- | --- | --- |
-| As a user, my objective is to discover the instructions on how to play the game in order to enhance my gameplay efficiency. | The game has a "rules" page popup which can be accessed by clicking on the "rules" button on the main page. | <details><summary>Screenshot of result</summary>![Result](docs/user-stories/userstories-rulespopup.png)</details> |
-| As a user, I desire the ability to validate the correctness of my answers, thereby increasing my score. | When a user clicks on the answer buttons, a visual indication is provided by changing the color of the button. If the selected answer is correct, the button turns green; otherwise, it turns red. | <details><summary>Screenshot of result</summary>![Result](docs/user-stories/userstories-correctanswer.png)</details> |
-| As a user, I would like to have visibility of the remaining time so that I can maintain a suitable pace during gameplay and avoid running out of time. | The user is provided with a countdown timer that is visible during their gameplay. The countdown timer also changes color depending on the urgency of time left. | <details><summary>Screenshot of result</summary>![Result](docs/user-stories/userstories-timer.png)</details> |
-| As a user, I would like to view my final score at the end of the game in order to see my performance on the scoreboard and dashboard. | Upon completion of the game, the user is presented with their score along with a performance message that reflects their performance, varying based on how well or poorly they performed. | <details><summary>Screenshot of result</summary>![Result](docs/user-stories/userstories-score.png)</details> |
-| As a user, I want to be able to cancel the game at any time during play if I do not want to continue. | Upon completion of the game, the user is presented with a quit icon displayed in the upper right corner of the quiz game. By clicking this icon, the user is taken back to the main menu, exiting and resetting the game. | <details><summary>Screenshot of result</summary>![Result](docs/user-stories/userstories-exitbutton.png)</details> |
+| User Story | How this was achieved | Screenshot |
+|------------|-----------------------|------------|
+| As a first-time visitor, I want to be greeted with a welcoming message and an engaging UX style, to set the tone for my experience. | The application displays a visually appealing welcome screen with a warm greeting and attractive design elements. | [Screenshot](link-to-welcome-screenshot) |
+| As a first-time visitor, I want to be presented with a menu of options to explore, such as choosing a destination country or accessing currency conversion information. | The application provides a clear and accessible menu with various options for the user to choose from. | [Screenshot](link-to-menu-screenshot) |
+| As a first-time visitor, I want to select a destination country and see the currency used in that country, providing me with valuable information for my travels. | The application allows the user to select a destination country, and upon selection, displays the corresponding currency used in that country. | [Screenshot](link-to-currency-screenshot) |
+| As a first-time visitor, I want to have the option to view a list of currency codes for different countries to help me with currency exchange. | The application provides a feature where the user can access a list of currency codes for different countries, aiding them in currency exchange-related activities. | [Screenshot](link-to-currency-codes-screenshot) |
 
+**Returning Visitors**
 
-**`Returning Visitors`**
-
-| Returning User Goals | How this was achieved | Screenshot |
-| --- | --- | --- |
-| Review past scores | Returning users can access the dashboard that displays their previous quiz scores and username. They can view their improvement over time and compare their scores with other users. | <details><summary>Screenshot of result</summary>![Result](docs/user-stories/userstories-highscore.png)</details> |
-| Engage in competitive challenge | The quiz game offers leaderboard functionality where returning users can compete with other players to achieve high scores. | <details><summary>Screenshot of result</summary>![Result](docs/user-stories/userstories-leaderboard.png)</details> |
-| Play multiple times without limitations | Users, whether new or returning, have the freedom to play the quiz game multiple times. There are no restrictions on the number of attempts, allowing users to enjoy the game, improve their scores, and challenge themselves without limitations. | <details><summary>Screenshot of result</summary>![Result](docs/user-stories/userstories-playagain.png)</details> |
+| User Story | How this was achieved | Screenshot |
+|------------|-----------------------|------------|
+| As a returning visitor, I want to quickly access the travel guide without having to go through the initial welcome and name input process. | The application offers a "Quick Access" feature that allows returning visitors to bypass the initial steps and directly access the travel guide. | [Screenshot](link-to-quick-access-screenshot) |
+| As a returning visitor, I want to explore different options in the menu, such as choosing a new destination country or reviewing currency conversion details. | Returning visitors can navigate through the menu and choose various options, including selecting a different destination country and reviewing currency conversion details. | [Screenshot](link-to-menu-options-screenshot) |
+| As a returning visitor, I want to check the currency code for a specific country without having to navigate through the entire travel guide. | The application provides a dedicated section where returning visitors can quickly access and view the currency code for a specific country. | [Screenshot](link-to-currency-code-screenshot) |
+| As a returning visitor, I want to compare currency exchange rates and perform currency conversions for different countries I'm interested in. | Returning visitors can utilize the currency exchange feature to compare rates and perform conversions for multiple countries of interest. | [Screenshot](link-to-currency-conversion-screenshot) |
+| As a returning visitor, I want to have an enjoyable and visually appealing experience with captivating design and engaging travel-related questions. | The application maintains an engaging and visually appealing design throughout the user experience, incorporating captivating travel-related questions to enhance user enjoyment. | [Screenshot](link-to-engaging-experience-screenshot) |
 
 &nbsp;
 
@@ -188,13 +199,14 @@ Family and friends tested my game on their devices no issues were reported.
 
 The scores below are the average results obtained from three users who attempted the following.
  
-|Test|Result  |
-|--|--|
-|Obtain the welcome message try the name input validation |**100%**|
-|In the main meny, try to select an option that is not in the meny, validation |**100%**  |
-|In the convert exchange function, try to convert with different amount |**100%**|
-|Try the validation on the currency converting |**100%**|
-|Try the Enter blank space validation on all input |**100%**|
+| Test | Result |
+|------|--------|
+| Welcome message and user name validation | <font color="green">100%</font> |
+| Main menu option validation (selecting invalid option) | <font color="green">100%</font> |
+| Convert exchange function (testing with different amounts) | <font color="green">100%</font> |
+| Currency exchanger validation (selecting wrong currency) | <font color="green">100%</font> |
+| Blank space validation for all inputs | <font color="green">100%</font> |
+| Validation of integer inputs for "Y" and "N" questions | <font color="green">100%</font> |
 
 &nbsp;
 ### **Solved Bugs**
