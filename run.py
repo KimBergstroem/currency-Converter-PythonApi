@@ -181,6 +181,15 @@ def display_meny_currency_code(user_name): # Alternative 2 in meny - Country Cur
     for key, value in currency_dict.items():
         print(f"Code: {t.cyan}{t.bold}{key}{t.end} Country: {t.cyan}{t.bold}{value}{t.end}")
         print("------------------")
+        
+     while True:
+        repeat = input(f"Go back to main menu, Press {t.bold}{t.underline}ENTER{t.end}\n").upper()
+        if repeat == "":
+            os.system('clear')   
+            welcome_meny(user_name)               
+            break
+        else:
+            continue
 
 '''
 ################### Validation functions #########################
