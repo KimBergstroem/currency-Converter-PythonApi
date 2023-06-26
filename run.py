@@ -8,7 +8,7 @@ import time
 from google.oauth2.service_account import Credentials
 from modules.currency_data import currency_dict
 from modules.converter import display_meny_exchange
-from modules.ascii_art import display_welcome_title, display_welcome_meny, display_meny_country_title # Adds ascii art text headings
+from modules.ascii_art import display_welcome_title, display_welcome_meny, display_meny_country_title, display_meny_currency_code_title # Adds ascii art text headings
 from modules.text_colors import TextColors # Adds color to text
 t = TextColors # Declaring the function to smaller variabel
 
@@ -59,7 +59,8 @@ def welcome_meny(user_name):
             display_meny_country(user_name)
             break
         elif user_input_int == 2:
-            display_meny_currency_code()
+            os.system('clear')
+            display_meny_currency_code(user_name)
             break
         elif user_input_int == 3:
             os.system('clear')
@@ -138,7 +139,7 @@ def display_meny_country(user_name): # Alternative 1 in meny - Country Display
         if not found:
             print("Country not found.")
         print(" ")
-        print(f"{t.end}If you do not have this currency, we recommend you to go to our exchange service in the main menu!")
+        print(f"{t.end}If you do not have this currency, we recommend you to go to our {t.cyan}{t.bold}Exchange service{t.end} in the main menu!")
 
         while True:
             repeat_input = input(f"Do you wanna try another travel destination? Type ({t.bold}{t.green}Y{t.end}) and press {t.bold}{t.underline}ENTER{t.end}\nGo back to main menu? Type {t.end}({t.bold}{t.red}N{t.end}) and press {t.bold}{t.underline}ENTER{t.end} \n").upper()
@@ -182,7 +183,7 @@ def display_meny_currency_code(user_name): # Alternative 2 in meny - Country Cur
         print(f"Code: {t.cyan}{t.bold}{key}{t.end} Country: {t.cyan}{t.bold}{value}{t.end}")
         print("------------------")
         
-     while True:
+    while True:
         repeat = input(f"Go back to main menu, Press {t.bold}{t.underline}ENTER{t.end}\n").upper()
         if repeat == "":
             os.system('clear')   
