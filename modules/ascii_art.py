@@ -75,3 +75,19 @@ def display_meny_country_title(): # Exchange Meny Title
   {t.end}                                                         
     """
     print(country_title)
+
+
+def display_meny_currency_code_title(): # Exchange Meny Title
+    currency_title = f"""  
+ {t.yellow}
+ _____________________________________________________________________
+   ___          _          {t.magenta}__ _ _{t.end}                                     {t.yellow}|
+  / __\___   __| | ___    {t.magenta}/ /(_) |__  _ __ __ _ _ __ _   _{t.end}            {t.yellow}|
+ / /  / _ \ / _` |/ _ \  {t.magenta}/ / | | '_ \| '__/ _` | '__| | | |{t.end}           {t.yellow}|
+/ /__| (_) | (_| |  __/ {t.magenta}/ /__| | |_) | | | (_| | |  | |_| |{t.end}           {t.yellow}|
+\____/\___/ \__,_|\___| {t.magenta}\____/_|_.__/|_|  \__,_|_|   \__, |{t.end}           {t.yellow}|
+                                                     {t.magenta}|___/{t.end}            {t.yellow}|
+{t.bold}List of codes / country{t.end}                                               {t.yellow}|                
+  {t.end}                                                         
+    """
+    print(currency_title)
