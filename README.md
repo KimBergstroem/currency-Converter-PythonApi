@@ -178,23 +178,44 @@ All string validations have the <b>`.capitalize()`</b> or <b>`.upper()`</b> func
 
 | User Story | How this was achieved | Screenshot |
 |------------|-----------------------|------------|
-| As a first-time visitor, I want to be greeted with a welcoming message and an engaging UX style, to set the tone for my experience. | The application displays a visually appealing welcome screen with a warm greeting and attractive design elements. | [Screenshot](link-to-welcome-screenshot) |
-| As a first-time visitor, I want to be presented with a menu of options to explore, such as choosing a destination country or accessing currency conversion information. | The application provides a clear and accessible menu with various options for the user to choose from. | [Screenshot](link-to-menu-screenshot) |
-| As a first-time visitor, I want to select a destination country and see the currency used in that country, providing me with valuable information for my travels. | The application allows the user to select a destination country, and upon selection, displays the corresponding currency used in that country. | [Screenshot](link-to-currency-screenshot) |
-| As a first-time visitor, I want to have the option to view a list of currency codes for different countries to help me with currency exchange. | The application provides a feature where the user can access a list of currency codes for different countries, aiding them in currency exchange-related activities. | [Screenshot](link-to-currency-codes-screenshot) |
+| As a first-time visitor, I want to be greeted with a welcoming message and an engaging UX style, to set the tone for my experience. | The application displays a visually appealing welcome screen with a warm greeting and attractive design elements. | <details><summary>Screenshot of result</summary>![Result](docs/testing/readme-testing-welcome_message.png)</details> |
+| As a first-time visitor, I want to be presented with a menu of options to explore, such as choosing a destination country or accessing currency conversion information. | The application provides a clear and accessible menu with various options for the user to choose from. | <details><summary>Screenshot of result</summary>![Result](docs/testing/readme-testing-menu.png)</details> |
+| As a first-time visitor, I want to select a destination country and see the currency used in that country, providing me with valuable information for my travels. | The application allows the user to select a destination country, and upon selection, displays the corresponding currency used in that country. | <details><summary>Screenshot of result</summary><video src="docs/testing/readme-testing-country_pick.mp4" controls></video></details> |
+| As a first-time visitor, I want to compare currency and perform currency conversions for different countries I'm interested in. | First time visitors can utilize the currency exchange feature to compare rates and perform conversions for different currencies. | <details><summary>Screenshot of result</summary>![Result](docs/testing/readme-testing-exchange.png)</details> |
+| As a first-time visitor, I want to have the option to view a list of currency codes for different countries to help me with currency exchange. | The application provides a feature where the user can access a list of currency codes for different countries, aiding them in currency exchange-related activities. | <details><summary>Screenshot of result</summary>![Result](docs/testing/readme-testing-country_codes.png)</details> |
 
 **Returning Visitors**
 
 | User Story | How this was achieved | Screenshot |
 |------------|-----------------------|------------|
-| As a returning visitor, I want to quickly access the travel guide without having to go through the initial welcome and name input process. | The application offers a "Quick Access" feature that allows returning visitors to bypass the initial steps and directly access the travel guide. | [Screenshot](link-to-quick-access-screenshot) |
-| As a returning visitor, I want to explore different options in the menu, such as choosing a new destination country or reviewing currency conversion details. | Returning visitors can navigate through the menu and choose various options, including selecting a different destination country and reviewing currency conversion details. | [Screenshot](link-to-menu-options-screenshot) |
-| As a returning visitor, I want to check the currency code for a specific country without having to navigate through the entire travel guide. | The application provides a dedicated section where returning visitors can quickly access and view the currency code for a specific country. | [Screenshot](link-to-currency-code-screenshot) |
-| As a returning visitor, I want to compare currency exchange rates and perform currency conversions for different countries I'm interested in. | Returning visitors can utilize the currency exchange feature to compare rates and perform conversions for multiple countries of interest. | [Screenshot](link-to-currency-conversion-screenshot) |
-| As a returning visitor, I want to have an enjoyable and visually appealing experience with captivating design and engaging travel-related questions. | The application maintains an engaging and visually appealing design throughout the user experience, incorporating captivating travel-related questions to enhance user enjoyment. | [Screenshot](link-to-engaging-experience-screenshot) |
+| As a returning visitor, I want to explore different options in the menu, such as choosing a new destination country or reviewing currency conversion details. | Returning visitors can navigate through the menu and choose various options, including selecting a different destination country and reviewing currency conversion details. | <details><summary>Screenshot of result</summary>![Result](docs/testing/readme-testing-menu.png)</details> |
+| As a returning visitor, I want to check the currency code for a specific country without having to navigate through the entire travel guide. | The application provides a dedicated section where returning visitors can quickly access and view the currency code for a specific country. | <details><summary>Screenshot of result</summary>![Result](docs/testing/readme-testing-country-library.png)</details> |
+| As a returning visitor, I want to compare currency exchange rates and perform currency conversions for different countries I'm interested in. | Returning visitors can utilize the currency exchange feature to compare rates and perform conversions for multiple countries of interest. | <details><summary>Screenshot of result</summary>![Result](docs/testing/readme-testing-exchange.png)</details> |
+| As a returning visitor, I want to have an enjoyable and visually appealing experience with captivating design and engaging travel-related questions. | The application maintains an engaging and visually appealing design throughout the user experience, incorporating captivating travel-related questions to enhance user enjoyment. | <details><summary>Screenshot of result</summary><video src="docs/testing/readme-testing-country_pick.mp4" controls></video></details></details> |
 
 &nbsp;
 
+### Automated Testing
+The <b>PEP8</b> validator was used to validate all Python modules in this project. No errors were found besides warnings on some lines that are too long, which can't be undone or shortened.
+
+  * [PEP8 - run.py](https://pep8ci.herokuapp.com/#)
+    ![run.py file](docs/testing/automated-testing/readme-automated_testing-main.png)
+
+* [PEP8 - converter.py](https://pep8ci.herokuapp.com/#)
+    ![converter.py file](docs/testing/automated-testing/readme-automated_testing-currency_converter.png)
+
+* [PEP8 - currency_data.py](https://pep8ci.herokuapp.com/#)
+    ![currency_data file](docs/testing/automated-testing/readme-automated_testing-currency_data.png)
+
+* [PEP8 - text_colors.py](https://pep8ci.herokuapp.com/#)
+    ![text_colors.py file](docs/testing/automated-testing/readme-automated_testing-text_colors.png)
+
+
+
+
+&nbsp;
+
+### Manuell Testing
 Family and friends tested my game on their devices no issues were reported.
 
 The scores below are the average results obtained from three users who attempted the following.
