@@ -20,9 +20,9 @@ def display_welcome_title(): # Welcome Title
   /__\_  _____| |__   __ _ _ __   __ _  ___                           |
  /_\ \ \/ / __| '_ \ / _` | '_ \ / _` |/ _ |                          |
 //__  >  < (__| | | | (_| | | | | (_| |  __/                          |
-\__/ /_/\_\___|_| |_|\__,_|_| |_|\__, |\___|                          |
-                                 |___/   {t.bold}Made by  Kim B{t.end}{t.magenta}               |                   
-  {t.end}                                                         
+\__/ /_/\_\___|_| |_|\__,_|_| |_|\__, |\ {t.bold}Made by Kim B{t.end}{t.magenta}                |
+                                 |___/   {t.bold} github.com/KimBergstroem{t.end}{t.magenta}    | {t.end}                  
+                                                                                              
     """
     print(welcome_title)
 
