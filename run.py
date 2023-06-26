@@ -91,7 +91,6 @@ def display_meny_country(user_name):  # Alternative 1 in meny - Country Display
     Will display all countries in the world and specific currency
     Will ask user, were to travel
     """
-
     LINE_UP = '\033[1A'     # Module Time function, Move up n(=1) lines
     LINE_CLEAR = '\x1b[2K'  # Module Time function, Erase current line
 
@@ -103,6 +102,7 @@ def display_meny_country(user_name):  # Alternative 1 in meny - Country Display
     print(f"{t.bold}Where do YOU want to travel? {t.red}{t.bold}Warm{t.end} {t.bold}or {t.blue}{t.bold}Cold{t.end}{t.bold} weather? City or Island?{t.end} ")
     time.sleep(5)
     print(LINE_UP, end=LINE_CLEAR)
+
     while True:
         try:
             content_worksheet = SHEET.worksheet("content")      # Declaring variabel from the worksheet that can be used in the code below
@@ -201,7 +201,7 @@ def display_meny_currency_code(user_name):  # Alternative 2 in meny - Country Cu
             continue
 
 
-#  Validation functions
+#  Validation functions START HERE
 def validate_name(name):
     """
     Check for a name with 3 or more letters
