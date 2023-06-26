@@ -155,12 +155,20 @@ def display_meny_country(user_name): # Alternative 1 in meny - Country Display
             else:
                 continue
 
-def display_meny_currency_code(): # Alternative 2 in meny - Country Currency Code
+def display_meny_currency_code(user_name): # Alternative 2 in meny - Country Currency Code
     """
     Will display the correct currency code, if user doesnt know the correct 3 letter code
     """
-    print("Here you have a list of all country currency codes that you can use for exchange")
-    welcome_meny()
+    display_meny_currency_code_title()
+    time.sleep(1)
+    message = (f"Here you will find a list with all 3 Letters codes and country! \nBe sure to scroll {t.bold}up{t.end} and {t.bold}down{t.end} to get full overview over the list!\n")
+    for char in message:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.1)
+    print("Reloading the list, please wait")
+    time.sleep(2)
+    print(" ")
 
 
 '''
