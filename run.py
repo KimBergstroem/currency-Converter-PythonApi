@@ -12,8 +12,8 @@ import dotenv
 from gspread.exceptions import APIError
 from google.oauth2.service_account import Credentials
 from modules.currency_data import currency_dict
-from modules.converter import display_meny_exchange
-from modules.ascii_art import display_welcome_title, display_welcome_meny, display_meny_country_title, display_meny_currency_code_title
+from modules.converter import display_menu_exchange
+from modules.ascii_art import display_welcome_title, display_welcome_menu, display_menu_country_title, display_menu_currency_code_title
 from modules.text_colors import TextColors  # Adds color to text
 
 t = TextColors  # Declaring the function to smaller variabel
@@ -53,32 +53,32 @@ def welcome_message():
     return user_name
 
 
-def welcome_meny(user_name):
+def welcome_menu(user_name):
     """
     Welcome message for the user
     User is asked to input their name
     """
     while True:
-        display_welcome_meny()
+        display_welcome_menu()
         user_input_int = validate_number(f"Please {t.green}{t.bold}{user_name}{t.end}, Enter your number here and press {t.bold}{t.underline}ENTER{t.end}: ")
         if user_input_int == 1:
             os.system('clear')
-            display_meny_country(user_name)
+            display_menu_country(user_name)
             break
         elif user_input_int == 2:
             os.system('clear')
-            display_meny_currency_code(user_name)
+            display_menu_currency_code(user_name)
             break
         elif user_input_int == 3:
             os.system('clear')
-            if not display_meny_exchange():
+            if not display_menu_exchange():
                 return  # Return to the main menu
             os.system('clear')
         elif user_input_int == 4:
             print(" ")
             print(f"Thank you {t.green}{t.bold}{user_name}{t.end} for this time!")
             print(f"I Hope you enjoyed this {t.green}{t.bold}Travel Guide{t.end}! I will see you next time!!{t.end}")
-            time.sleep(6)
+            time.sleep(3)
             os.system('clear')
             quit()
         else:
@@ -87,7 +87,7 @@ def welcome_meny(user_name):
                 continue
 
 
-def display_meny_country(user_name):  # Alternative 1 in meny - Country Display
+def display_menu_country(user_name):  # Alternative 1 in menu - Country Display
     """
     Will display all countries in the world and specific currency
     Will ask user, were to travel
@@ -95,14 +95,14 @@ def display_meny_country(user_name):  # Alternative 1 in meny - Country Display
     LINE_UP = '\033[1A'     # Module Time function, Move up n(=1) lines
     LINE_CLEAR = '\x1b[2K'  # Module Time function, Erase current line
 
+
     # PRINT OUT THE CONTENTS
-    display_meny_country_title()
-    print(f"{t.bold}Let us help you decide were to travel with a small questionare!{t.end} ")
-    time.sleep(5)
+    display_menu_country_title()
+    print(f"{t.bold}Let us help you decide where to travel with a brief questionnaire!...{t.end} ")
+    time.sleep(2)
     print(LINE_UP, end=LINE_CLEAR)
-    print(f"{t.bold}Where do YOU want to travel? {t.red}{t.bold}Warm{t.end} {t.bold}or {t.blue}{t.bold}Cold{t.end}{t.bold} weather? City or Island?{t.end} ")
-    time.sleep(5)
-    print(LINE_UP, end=LINE_CLEAR)
+    # Block user input while printing
+    press_enter_to_continue("\nPress Enter to continue...")
 
     while True:
         try:
@@ -124,7 +124,7 @@ def display_meny_country(user_name):  # Alternative 1 in meny - Country Display
                     print(f"{t.cyan}{t.bold}{value}{t.end}")
             print(" ")
             user_country = validation_user_input(f"What country in the wonderful continent of {t.cyan}{t.bold}{user_content}{t.end} would you like to visit?\nChoose a country and press {t.bold}{t.underline}ENTER:{t.end} ", column_values)
-            user_saved_data = input(f"You have been choosing {t.cyan}{t.bold}{user_content}{t.end} and country {t.cyan}{t.bold}{user_country}{t.end}. Great choice!\nPress {t.bold}{t.underline}ENTER{t.end} to see what currency that are used in that country!")
+            user_saved_data = press_enter_to_continue(f"You have been choosing {t.cyan}{t.bold}{user_content}{t.end} and country {t.cyan}{t.bold}{user_country}{t.end}. Great choice!\nPress {t.bold}{t.underline}ENTER{t.end} to see what currency that are used in that country!")
             print("Please wait for the currency to load...")
             currency_worksheet = SHEET.worksheet("currency")  # Declaring variabel from the worksheet that can be used in the code below
             key_value = currency_worksheet.col_values(1, 1)   # Get the value of the first cell in the first row which contain "country".
@@ -156,21 +156,21 @@ def display_meny_country(user_name):  # Alternative 1 in meny - Country Display
                 print(f'{t.red}Please press either "Y" for YES or "N" for NO{t.end}')
             if "Y" in repeat_input:
                 os.system('clear')
-                display_meny_country_title()
+                display_menu_country_title()
                 break
             elif "N" in repeat_input:
                 os.system('clear')
-                welcome_meny(user_name)
+                welcome_menu(user_name)
                 break
             else:
                 continue
 
 
-def display_meny_currency_code(user_name):  # Alternative 2 in meny - Country Currency Code
+def display_menu_currency_code(user_name):  # Alternative 2 in menu - Country Currency Code
     """
     Will display the correct currency code, if user doesnt know the correct 3 letter code
     """
-    display_meny_currency_code_title()
+    display_menu_currency_code_title()
     time.sleep(1)
     message = (f"Here you will find a list with all 3 Letters codes and country! \nBe sure to scroll {t.bold}up{t.end} and {t.bold}down{t.end} to get full overview over the list!\n")
     for char in message:
@@ -196,7 +196,7 @@ def display_meny_currency_code(user_name):  # Alternative 2 in meny - Country Cu
         repeat = input(f"Go back to main menu, Press {t.bold}{t.underline}ENTER{t.end}\n").upper()
         if repeat == "":
             os.system('clear')
-            welcome_meny(user_name)
+            welcome_u(user_name)
             break
         else:
             continue
@@ -224,6 +224,22 @@ def validate_name(name):
     return True
 
 
+def press_enter_to_continue(user_saved_data):
+    """
+    Check for pressed key "ENTER" to continue with the application
+    Checks for user press "ENTER" on the keyboard
+    """
+    while True:
+        try:
+            if user_saved_data == "":
+                break
+            else:
+                print("Please press only the 'Enter' key to continue.")
+        except KeyboardInterrupt:
+            print("\nExiting...")
+            exit()
+
+
 def validate_number(number):
     """
     Validate that user enters correct integer instead of string
@@ -232,7 +248,7 @@ def validate_number(number):
         try:
             userInput = int(input(number))
         except ValueError:
-            print(f"{t.red}Try again.{t.end} Please choose from 1-4 as the meny shows above!!")
+            print(f"{t.red}Try again.{t.end} Please choose from 1-4 as the menu shows above!!")
             continue
         else:
             return userInput
@@ -258,7 +274,7 @@ def main():  # Main Start Function
     Will run all everything
     """
     user_name = welcome_message()
-    welcome_meny(user_name)
+    welcome_menu(user_name)
 
 
 main()

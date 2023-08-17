@@ -27,8 +27,8 @@ def display_welcome_title(): # Welcome Title
     print(welcome_title)
 
 
-def display_welcome_meny(): # Welcome Meny
-    welcome_meny = f"""  
+def display_welcome_menu(): # Welcome Menu
+    welcome_menu = f"""  
  {t.yellow}
  _____________________________________________________________________
                                                                       |
@@ -40,10 +40,10 @@ def display_welcome_meny(): # Welcome Meny
                                                                       |
 {t.bold}Enter the number of the navigation menu{t.end}{t.yellow}                               |                                            
     {t.end}"""
-    print(welcome_meny)
+    print(welcome_menu)
 
 
-def display_meny_exchange_title(): # Exchange Meny Title
+def display_menu_exchange_title(): # Exchange Menu Title
     exchange_title = f"""  
  {t.yellow}
  _____________________________________________________________________
@@ -60,7 +60,7 @@ def display_meny_exchange_title(): # Exchange Meny Title
     print(exchange_title)
 
 
-def display_meny_country_title(): # Exchange Meny Title
+def display_menu_country_title(): # Exchange Menu Title
     country_title = f"""  
  {t.yellow}
  _____________________________________________________________________
@@ -77,7 +77,7 @@ def display_meny_country_title(): # Exchange Meny Title
     print(country_title)
 
 
-def display_meny_currency_code_title(): # Exchange Meny Title
+def display_menu_currency_code_title(): # Exchange Menu Title
     currency_title = f"""  
  {t.yellow}
  _____________________________________________________________________

@@ -7,17 +7,17 @@ import requests
 import os
 import dotenv
 from modules.currency_data import currency_dict
-from modules.ascii_art import display_meny_exchange_title
+from modules.ascii_art import display_menu_exchange_title
 from modules.text_colors import TextColors # Adds color to text
 
 t = TextColors # Declaring the function to smaller variabel
 
-def display_meny_exchange():
+def display_menu_exchange():
     """
     Currency Converter function
     Compares two - 3 letters currency code with convertion
     """
-    display_meny_exchange_title()
+    display_menu_exchange_title()
 
     while True:
         while True:
@@ -87,11 +87,11 @@ def display_meny_exchange():
                 return repeat
             elif repeat == "Y":
                 os.system('clear')
-                display_meny_exchange_title()
+                display_menu_exchange_title()
                 break
             else:
                 continue
 
 
 if __name__ == '__main__':
-   display_meny_exchange()
+   display_menu_exchange()
