@@ -99,7 +99,6 @@ def display_menu_country(user_name):  # Alternative 1 in menu - Country Display
     # PRINT OUT THE CONTENTS
     display_menu_country_title()
     print(f"{t.bold}Let us help you decide where to travel with a brief questionnaire!...{t.end} ")
-    time.sleep(2)
     print(LINE_UP, end=LINE_CLEAR)
     # Block user input while printing
     press_enter_to_continue("\nPress Enter to continue...")
