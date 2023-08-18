@@ -5,8 +5,9 @@ Different ASCII HEADINGS TEXT
 from modules.text_colors import TextColors
 t = TextColors
 
-def display_welcome_title(): # Welcome Title
-    welcome_title = f"""  
+
+def display_welcome_title():  # Welcome Title
+    welcome_title = f"""
  {t.yellow}
 
  _____________________________________________________________________
@@ -22,12 +23,11 @@ def display_welcome_title(): # Welcome Title
 //__  >  < (__| | | | (_| | | | | (_| |  __/                          |
 \__/ /_/\_\___|_| |_|\__,_|_| |_|\__, |\ {t.bold}Made by Kim B{t.end}{t.magenta}                |
                                  |___/   {t.bold} github.com/KimBergstroem{t.end}{t.magenta}    | {t.end}                  
-                                                                                              
     """
     print(welcome_title)
 
 
-def display_welcome_menu(): # Welcome Menu
+def display_welcome_menu():  # Welcome Menu
     welcome_menu = f"""  
  {t.yellow}
  _____________________________________________________________________
@@ -43,7 +43,7 @@ def display_welcome_menu(): # Welcome Menu
     print(welcome_menu)
 
 
-def display_menu_exchange_title(): # Exchange Menu Title
+def display_menu_exchange_title():  # Exchange Menu Title
     exchange_title = f"""  
  {t.yellow}
  _____________________________________________________________________
@@ -60,7 +60,7 @@ def display_menu_exchange_title(): # Exchange Menu Title
     print(exchange_title)
 
 
-def display_menu_country_title(): # Exchange Menu Title
+def display_menu_country_title():  # Exchange Menu Title
     country_title = f"""  
  {t.yellow}
  _____________________________________________________________________
@@ -77,7 +77,7 @@ def display_menu_country_title(): # Exchange Menu Title
     print(country_title)
 
 
-def display_menu_currency_code_title(): # Exchange Menu Title
+def display_menu_currency_code_title():  # Exchange Menu Title
     currency_title = f"""  
  {t.yellow}
  _____________________________________________________________________
@@ -88,6 +88,6 @@ def display_menu_currency_code_title(): # Exchange Menu Title
 \____/\___/ \__,_|\___| {t.magenta}\____/_|_.__/|_|  \__,_|_|   \__, |{t.end}           {t.yellow}|
                                                      {t.magenta}|___/{t.end}            {t.yellow}|
 {t.bold}List of codes / country{t.end}                                               {t.yellow}|                
-  {t.end}                                                         
+  {t.end}                
     """
     print(currency_title)

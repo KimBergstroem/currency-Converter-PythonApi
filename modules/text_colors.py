@@ -16,4 +16,3 @@ class TextColors:
     bold = "\u001b[1m"
     inverse = "\u001b[7m"
     end = "\u001b[0m"
-    
