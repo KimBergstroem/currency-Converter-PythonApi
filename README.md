@@ -26,7 +26,7 @@ The Currency Exchanger and Travel Guide is a **Python-based** 🐍 application t
 
 ---
 
-## <span id="readme-top">**Table of Contents 🌎** </span>
+## <span id="readme-top">**Table of Contents** 🌎</span>
 
 - [User Story](#user-story-🌎)
 - [How to Use Travel Guide](#how-to-use-travel-guide-🌎)
@@ -40,7 +40,7 @@ The Currency Exchanger and Travel Guide is a **Python-based** 🐍 application t
 
 ---
 
-## **User Story 🌎** 
+## **User Story** 🌎
 
 ### First Time Visitor Goals
 * **As a first-time visitor**, I want to be greeted with a welcoming message and an engaging UX style to set the tone for my experience.
@@ -57,12 +57,12 @@ The Currency Exchanger and Travel Guide is a **Python-based** 🐍 application t
 
 ---
 
-## **How to Use Travel Guide 🌎** 
+## **How to Use Travel Guide** 🌎
 The app will instantly display the converted amount based on current exchange rates. In addition to currency conversion, the app offers engaging travel-related questions to make your experience enjoyable. Explore destination recommendations and travel tips for your trip planning. Enjoy the convenience of currency conversion and the excitement of discovering new travel insights with the **travel_Guide** app.
 
 ---
 
-## **Program Flow 🌎** 
+## **Program Flow** 🌎
 The flowchart represents the logic of the <b>travel_Guide</b> application. The program starts by prompting the user to input their name and validates the input to ensure that the name is at least three letters long and contains only letters.
 
 If the input is valid, a welcome message is shown briefly and then disappears. 
@@ -86,7 +86,7 @@ Finally, choosing option 4 displays the concluding message and exits the applica
 
 ---
 
-## **Data Model 🌎** 
+## **Data Model** 🌎
 The program uses the **Google Sheets API** to access a Google Sheet that contains content, country, and currency data. The program then saves and compares the placeholders for the user inputs and presents the resulting information. The program uses the `input()` function to get user choices and a series of validation functions to ensure that user inputs are valid.
 
 The **Fixer API** is utilized in this application to provide access to real-time and historical exchange rate data for currency conversion purposes. It enables the integration of currency exchange functionality.
@@ -95,7 +95,7 @@ The application also imports **sys, time, os, requests, and gspread** modules to
 
 ---
 
-## **Technologies Used 🌎**
+## **Technologies Used** 🌎
 ### **Languages**
 - **Python 3**: primary programming language for the project
 - **HTML**, **CSS**, and **JavaScript** are also used but only manipulated for better UI experience for users.
@@ -110,7 +110,7 @@ The application also imports **sys, time, os, requests, and gspread** modules to
 
 ---
 
-## **Features 🌎** 
+## **Features** 🌎
 ### **Existing Features**
 The **travel_Guide** application currently offers the following features:
 
@@ -128,8 +128,8 @@ Extended Feature Options: Provide more storylines or narrative options to allow 
 - **Data Saving**: Give users the option to save data into the worksheet, with personal travel tips or information to refer back to.
 
 ---
-
-## **Validation 🌎**
+ 
+## **Validation** 🌎
 All string validations use the `.capitalize()` or `.upper()` function to prevent any capitalization errors.
 
 ### **Name Validation:**
@@ -169,8 +169,8 @@ All string validations use the `.capitalize()` or `.upper()` function to prevent
     `if` "N" `not in` "variable" `and` "Y" `not in` "variable":
     `print('Please press either "Y" for YES or "N" for NO')`
 ---
-
-## **Testing 🌎**
+ 
+## **Testing** 🌎
 
 ### Testing User Stories
 
@@ -260,7 +260,7 @@ The scores below are the average results obtained from three users who attempted
 
 ---
 
-## **Deployment 🌎**
+## **Deployment** 🌎
 To deploy this project, follow these steps:
 
 1. Fork and clone this repository to your local machine.
@@ -273,7 +273,7 @@ After following these steps, your app should be successfully deployed to Heroku.
 
 ---
 
-## **Credits 🌎**
+## **Credits** 🌎
 
 The inspiration for this project's development came from a range of online resources, including tutorials from Simplilearn and Stack Overflow. Additionally, references from websites like W3Schools and Code Institute's learning platform were utilized.
 
