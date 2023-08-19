@@ -157,6 +157,12 @@ All string validations use the `.capitalize()` or `.upper()` function to prevent
 - If inputting a blank space - OK, gives the correct error message
 - Anything else inserted - OK, gives the correct error message
 
+### **User typing "enter" Validation:**
+- If inputting the correct string value "enter" - OK, gives the user information that this content/country exists.
+- If inputting an integer instead of a string value - OK, gives the correct error message
+- If inputting a blank space - OK, gives the correct error message
+- Anything else inserted - OK, gives the correct error message
+
 ### **All (Y)es or (N)o Question Validation:**
 - If jused with an IF statement as below code: &nbsp;
 
@@ -190,7 +196,17 @@ All string validations use the `.capitalize()` or `.upper()` function to prevent
 &nbsp;
 
 ### Automated Testing
-The **PEP8** validator was used to validate all Python modules in this project. No errors were found besides warnings on some lines that are too long, which can't be undone or shortened.
+The **PEP8** validator was used to validate all Python modules and files in this project. No errors were found.
+
+The only file that gave an error was the `ascii_art.py` file. The warnings are some lines that are too long, which can't be undone or shortened, whitespaces, and an invalid escape sequence. This can't be fixed without breaking the ASCII style that is being used.
+
+The error code is the following:
+
+`W605 invalid escape sequence '\ '`
+
+`E501 line too long (82 > 79 characters)`
+
+
 
 - [PEP8 - run.py](https://pep8ci.herokuapp.com/#)
     ![run.py file](docs/testing/automated-testing/readme-automated_testing-main.png)
@@ -204,6 +220,9 @@ The **PEP8** validator was used to validate all Python modules in this project. 
 - [PEP8 - text_colors.py](https://pep8ci.herokuapp.com/#)
     ![text_colors.py file](docs/testing/automated-testing/readme-automated_testing-text_colors.png)
 
+- [PEP8 - ascii.py](https://pep8ci.herokuapp.com/#)
+    ![ascii.py file](docs/testing/automated-testing/readme-automated_testing-ascii.png)
+
 &nbsp;
 
 ### Manual Testing
@@ -213,12 +232,12 @@ The scores below are the average results obtained from three users who attempted
 
 | Test | Result |
 |------|--------|
-| Welcome message and user name validation | **100%** |
-| Main menu option validation (selecting an invalid option) | **100%** |
-| Currency conversion function (testing with different amounts) | **100%** |
-| Currency exchange validation (selecting the wrong currency) | **100%** |
-| Blank space validation for all inputs | **100%** |
-| Validation of integer inputs for "Y" and "N" questions | **100%** |
+| Welcome message and user name validation | **`100%`** |
+| Main menu option validation (selecting an invalid option) | **`100%`** |
+| Currency conversion function (testing with different amounts) | **`100%`** |
+| Currency exchange validation (selecting the wrong currency) | **`100%`** |
+| Blank space validation for all inputs | **`100%`** |
+| Validation of integer inputs for "Y" and "N" questions | **`100%`** |
 
 &nbsp;
 
