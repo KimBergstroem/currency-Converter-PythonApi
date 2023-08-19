@@ -353,7 +353,7 @@ def validation_user_input(question, valid_values):
     while True:
         # Remove leading/trailing spaces
         user_input = input(question).capitalize().strip()
-        if user_input == "":
+        if user_input == "" or user_input.isdigit():
             print(f"{t.red}Please enter a valid input.{t.end}")
         elif user_input not in valid_values:
             print(
