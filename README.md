@@ -132,36 +132,58 @@ Extended Feature Options: Provide more storylines or narrative options to allow 
 ## **Validation** 🌎
 All string validations use the `.capitalize()` or `.upper()` function to prevent any capitalization errors.
 
-### **Name Validation:**
-- Validating 3 or more letters - OK for username
-- Only letters - OK for username
-- Correct name input - OK for username
-- Numbers instead of letters A-Z - OK, gives correct error message
-- 2 letters inserted - OK, gives correct error message
+**Name Validation Section**
 
-### **Main Menu Validation:**
-- Choosing numbers 1-4 - OK, takes the user to the selected option
-- Trying another number besides "1-4" - OK, gives the correct error message
-- Trying to insert a string instead - OK, gives the correct error message
-- Anything else inserted - OK, gives the correct error message
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Validating 3 or more letters | OK for username | Performed validation with 3 or more letters | Validation passed for 3 or more letters | ✅ |
+| Only letters | OK for username | Validated with only letters | Validation passed for letters | ✅ |
+| Correct name input | OK for username | Validated with correct name input | Validation passed for correct input | ✅ |
+| Numbers instead of letters A-Z | OK, gives correct error message | Inserted numbers instead of letters A-Z | Correct error message displayed | ✅ |
+| 2 letters inserted | OK, gives correct error message | Inserted 2 letters | Correct error message displayed | ✅ |
 
-### **Currency Code Validation:**
-- If inputting the 3-letter code - OK, gives the user the option to exchange the currency and informs them that this currency code exists
-- If inputting an integer instead of a string value - OK, gives the correct error message
-- If inputting the wrong 3-letter code - OK, gives the correct error message displaying that this code is not an existing currency code
-- Anything else inserted - OK, gives the correct error message
+**Main Menu Validation Section**
 
-### **Data Search to Worksheet Validation:**
-- If inputting the correct content/country string value - OK, gives the user information that this content/country exists.
-- If inputting an integer instead of a string value - OK, gives the correct error message
-- If inputting a blank space - OK, gives the correct error message
-- Anything else inserted - OK, gives the correct error message
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Choosing numbers 1-4 | OK, takes the user to the selected option | Selected numbers 1-4 | Redirected to the selected option | ✅ |
+| Trying another number besides "1-4" | OK, gives the correct error message | Tried another number besides "1-4" | Correct error message displayed | ✅ |
+| Trying to insert a string instead | OK, gives the correct error message | Inserted a string instead of a number | Correct error message displayed | ✅ |
+| Anything else inserted | OK, gives the correct error message | Inserted an invalid input | Correct error message displayed | ✅ |
 
-### **User typing "enter" Validation:**
-- If inputting the correct string value "enter" - OK, gives the user information that this content/country exists.
-- If inputting an integer instead of a string value - OK, gives the correct error message
-- If inputting a blank space - OK, gives the correct error message
-- Anything else inserted - OK, gives the correct error message
+**Currency Code Validation Section**
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| If inputting the 3-letter code | OK, gives the user the option to exchange the currency and informs them that this currency code exists | Inputted a valid 3-letter code | Received the option to exchange and informed of code existence | ✅ |
+| If inputting an integer instead of a string value | OK, gives the correct error message | Inserted an integer | Correct error message displayed | ✅ |
+| If inputting the wrong 3-letter code | OK, gives the correct error message displaying that this code is not an existing currency code | Inserted an incorrect 3-letter code | Correct error message displayed | ✅ |
+| Anything else inserted | OK, gives the correct error message | Inserted an invalid input | Correct error message displayed | ✅ |
+
+**Data Search to Worksheet Validation Section**
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| If inputting the correct content/country string value | OK, gives the user information that this content/country exists | Inputted correct content/country string value | Received information that it exists | ✅ |
+| If inputting an integer instead of a string value | OK, gives the correct error message | Inserted an integer | Correct error message displayed | ✅ |
+| If inputting a blank space | OK, gives the correct error message | Inserted a blank space | Correct error message displayed | ✅ |
+| Anything else inserted | OK, gives the correct error message | Inserted an invalid input | Correct error message displayed | ✅ |
+
+**User typing "enter" Validation Section**
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| If inputting the correct string value "enter" | OK, gives the user information that this content/country exists | Inputted "enter" | Received information that it exists | ✅ |
+| If inputting an integer instead of a string value | OK, gives the correct error message | Inserted an integer | Correct error message displayed | ✅ |
+| If inputting a blank space | OK, gives the correct error message | Inserted a blank space | Correct error message displayed | ✅ |
+| Anything else inserted | OK, gives the correct error message | Inserted an invalid input | Correct error message displayed | ✅ |
+
+**All (Y)es or (N)o Question Validation Section**
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Using an IF statement for validation | Appropriate validation message | Used an IF statement for validation | Received the appropriate validation message | ✅ |
+
 
 ### **All (Y)es or (N)o Question Validation:**
 - If jused with an IF statement as below code: &nbsp;
