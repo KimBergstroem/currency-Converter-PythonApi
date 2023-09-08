@@ -211,6 +211,9 @@ The error code is the following:
 - [PEP8 - run.py](https://pep8ci.herokuapp.com/#)
     ![run.py file](docs/testing/automated-testing/readme-automated_testing-main.png)
 
+- [PEP8 - validation.py](https://pep8ci.herokuapp.com/#)
+    ![run.py file](docs/testing/automated-testing/readme-automated-testing-validation.png)
+
 - [PEP8 - converter.py](https://pep8ci.herokuapp.com/#)
     ![converter.py file](docs/testing/automated-testing/readme-automated_testing-currency_converter.png)
 
@@ -244,6 +247,7 @@ The scores below are the average results obtained from three users who attempted
 ### **Solved Bugs**
 | Type   | Bug | Solution |
 |--------|-----|----------|
+| run.py | The validation function was also accepting substrings of valid values, which led to unexpected behavior. For example, if the user was prompted to enter a continent and typed "asi", the code incorrectly considered this input as valid because "asi" is a substring of "Asia." This behavior was not desired as wanted and made the applicaiton to break further in the code when using the input data by user | I removed the line `key_value = user_content` as it was unnecessary. When user_content, originally a list, was assigned to a new variable (`key_value`), it became a string. Consequently, attempts to compare or search using in failed because `key_value` had become a string and not a list.  |
 | run.py | Couldn't find countries in the worksheet that had blank spaces in their names, such as "Sri Lanka" or "New Zealand." This caused the application to display an error message stating that the country does not exist in the list, even though it actually does. | Used `.capitalize()` `.strip()` to remove leading/trailing spaces and also changed the worksheet entry from "Sri Lanka" to "Sri lanka" with only the first letter capitalized. |
 | run.py | The application crashed when users attempted multiple searches for a country or currency due to the "Read requests per minute per user" limit on the Google Sheets API. This `gspread.APIError` occurred when the limit was exceeded. | Implemented a `try-except` block to handle the API error. When the error occurs, an appropriate message is displayed to the user, advising them to wait or return to the main menu and wait for 1 minute before making another request. |
 | run.py | The application would crash when users entered invalid inputs such as blank spaces, integers, or string values where they were not expected. These inputs were not handled properly, resulting in a program crash. | Implemented stricter validation checks on the different input questions and displayed appropriate error messages when an invalid input was entered. |
@@ -295,7 +299,7 @@ I'd like to give recognition to the individuals who supported me in completing t
 
 * My family, for their patience and assistance in identifying spelling mistakes and testing issues. Their support has been invaluable in improving the quality of this project.
 * Testers [Debbie B](https://github.com/DebbieBergstrom) and [Sandra B](https://github.com/SandraBergstrom) for their significant contributions in providing feedback, identifying errors, and offering valuable insights.
-* [Jubril](https://github.com/Jubrillionaire), my Code Institute Mentor, for his exceptional guidance and expertise, which greatly contributed to my growth as a developer.
+* [Jubril](https://github.com/Jubrillionaire) and [Brian](), my Code Institute Mentor, for his exceptional guidance and expertise, which greatly contributed to my growth as a developer.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
