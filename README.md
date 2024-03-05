@@ -30,13 +30,13 @@ The Currency Exchanger and Travel Guide is a **Python-based** 🐍 application t
 
 - [User Story](#user-story)
 - [How to Use Travel Guide](#how-to-use-travel-guide)
-- [Program Flow](#program-flow-🌎)
-- [Data Model](#data-model-🌎)
-- [Technologies Used](#technologies-used-🌎)
-- [Features](#features-🌎)
-- [Testing](#testing-🌎)
-- [Deployment](#deployment-🌎)
-- [Credits](#credits-🌎)
+- [Program Flow](#program-flow)
+- [Data Model](#data-model)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
 
 ---
 
@@ -322,6 +322,10 @@ I'd like to give recognition to the individuals who supported me in completing t
 * My family, for their patience and assistance in identifying spelling mistakes and testing issues. Their support has been invaluable in improving the quality of this project.
 * Testers [Debbie B](https://github.com/DebbieBergstrom) and [Sandra B](https://github.com/SandraBergstrom) for their significant contributions in providing feedback, identifying errors, and offering valuable insights.
 * [Jubril](https://github.com/Jubrillionaire) and [Brian](), my Code Institute Mentor, for his exceptional guidance and expertise, which greatly contributed to my growth as a developer.
+
+### **License**
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
