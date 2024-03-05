@@ -40,7 +40,7 @@ The Currency Exchanger and Travel Guide is a **Python-based** 🐍 application t
 
 ---
 
-## **User Story**
+## **User Story** 🌎
 
 ### First Time Visitor Goals
 * **As a first-time visitor**, I want to be greeted with a welcoming message and an engaging UX style to set the tone for my experience.
