@@ -28,7 +28,7 @@ The Currency Exchanger and Travel Guide is a **Python-based** 🐍 application t
 
 ## <span id="readme-top">**Table of Contents** 🌎</span>
 
-- [User Story](#user-story)
+* [User Story](#user-story)
 - [How to Use Travel Guide](#how-to-use-travel-guide)
 - [Program Flow](#program-flow)
 - [Data Model](#data-model)
