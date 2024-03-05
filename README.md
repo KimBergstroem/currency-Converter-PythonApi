@@ -28,7 +28,7 @@ The Currency Exchanger and Travel Guide is a **Python-based** 🐍 application t
 
 ## <span id="readme-top">**Table of Contents** 🌎</span>
 
-* [**User Story**](#user-story)
+- [User Story](#user-story)
 - [How to Use Travel Guide](#how-to-use-travel-guide)
 - [Program Flow](#program-flow)
 - [Data Model](#data-model)
@@ -40,15 +40,15 @@ The Currency Exchanger and Travel Guide is a **Python-based** 🐍 application t
 
 ---
 
-## **User Story**       🌎
+## **User Story**
 
-### First Time Visitor Goals
+### First Time Visitor Goals 🌎
 * **As a first-time visitor**, I want to be greeted with a welcoming message and an engaging UX style to set the tone for my experience.
 * **As a first-time visitor**, I want to be presented with a menu of options to explore, such as choosing a destination country or accessing currency conversion information.
 * **As a first-time visitor**, I want to select a destination country and see the currency used in that country, providing me with valuable information for my travels.
 * **As a first-time visitor**, I want to have the option to view a list of currency codes for different countries to help me with currency exchange.
 
-### Returning Visitor Goals
+### Returning Visitor Goals 🌎
 * **As a returning visitor**, I want to quickly access the travel guide without having to go through the initial welcome and name input process.
 * **As a returning visitor**, I want to explore different options in the menu, such as choosing a new destination country or reviewing currency conversion details.
 * **As a returning visitor**, I want to check the currency code for a specific country without having to navigate through the entire travel guide.
@@ -57,12 +57,12 @@ The Currency Exchanger and Travel Guide is a **Python-based** 🐍 application t
 
 ---
 
-## **How to Use Travel Guide** 🌎
+## **How to Use Travel Guide** 
 The app will instantly display the converted amount based on current exchange rates. In addition to currency conversion, the app offers engaging travel-related questions to make your experience enjoyable. Explore destination recommendations and travel tips for your trip planning. Enjoy the convenience of currency conversion and the excitement of discovering new travel insights with the **travel_Guide** app.
 
 ---
 
-## **Program Flow** 🌎
+## **Program Flow** 
 The flowchart represents the logic of the <b>travel_Guide</b> application. The program starts by prompting the user to input their name and validates the input to ensure that the name is at least three letters long and contains only letters.
 
 If the input is valid, a welcome message is shown briefly and then disappears. 
@@ -86,7 +86,7 @@ Finally, choosing option 4 displays the concluding message and exits the applica
 
 ---
 
-## **Data Model** 🌎
+## **Data Model** 
 The program uses the **Google Sheets API** to access a Google Sheet that contains content, country, and currency data. The program then saves and compares the placeholders for the user inputs and presents the resulting information. The program uses the `input()` function to get user choices and a series of validation functions to ensure that user inputs are valid.
 
 The **Fixer API** is utilized in this application to provide access to real-time and historical exchange rate data for currency conversion purposes. It enables the integration of currency exchange functionality.
@@ -95,12 +95,12 @@ The application also imports **sys, time, os, requests, and gspread** modules to
 
 ---
 
-## **Technologies Used** 🌎
-### **Languages**
+## **Technologies Used** 
+### **Languages** 🌎
 - **Python 3**: primary programming language for the project
 - **HTML**, **CSS**, and **JavaScript** are also used but only manipulated for better UI experience for users.
 
-### **Tools and Services**
+### **Tools and Services** 🌎
 - [Figma](https://www.figma.com/): an online diagramming tool used to create flowcharts for the project
 - [Canva](https://www.canva.com/): an all-in-one design tool used to create professional-grade graphics and visual content
 - [Gitpod](https://gitpod.io/): cloud-based IDE used for version control and coding
@@ -110,8 +110,8 @@ The application also imports **sys, time, os, requests, and gspread** modules to
 
 ---
 
-## **Features** 🌎
-### **Existing Features**
+## **Features** 
+### **Existing Features** 🌎
 The **travel_Guide** application currently offers the following features:
 
 - **Currency Conversion**: Users can convert between different currencies using the application. By selecting the source currency, target currency, and entering the desired amount, the app provides the converted value based on current exchange rates.
@@ -119,7 +119,7 @@ The **travel_Guide** application currently offers the following features:
 - **Destination Recommendations**: Users can explore destination recommendations within the app, aiding them in trip planning and discovery.
 - **User-Friendly Design**: The application has an intuitive and captivating design, ensuring a pleasant and enjoyable user interface.
 
-### **Future Ideas**
+### **Future Ideas** 🌎
 Extended Feature Options: Provide more storylines or narrative options to allow users to select and engage with different paths.
 
 - **Personalization**: Offer the option for users to name their travel destination or customize certain aspects of the travel experience to add a personalized touch.
@@ -129,7 +129,7 @@ Extended Feature Options: Provide more storylines or narrative options to allow 
 
 ---
  
-## **Validation** 🌎
+## **Validation** 
 All string validations use the `.capitalize()` or `.upper()` function to prevent any capitalization errors.
 
 **Name Validation Section**
@@ -185,16 +185,16 @@ All string validations use the `.capitalize()` or `.upper()` function to prevent
 | Using an IF statement for validation | Appropriate validation message | Used an IF statement for validation | Received the appropriate validation message | ✅ |
 
 
-### **All (Y)es or (N)o Question Validation:**
+### **All (Y)es or (N)o Question Validation:** 🌎
 - If jused with an IF statement as below code: &nbsp;
 
     `if` "N" `not in` "variable" `and` "Y" `not in` "variable":
     `print('Please press either "Y" for YES or "N" for NO')`
 ---
  
-## **Testing** 🌎
+## **Testing** 
 
-### Testing User Stories
+### Testing User Stories 🌎
 
 **First Time Visitors**
 
@@ -217,7 +217,7 @@ All string validations use the `.capitalize()` or `.upper()` function to prevent
 
 &nbsp;
 
-### Automated Testing
+### Automated Testing 🌎
 The **PEP8** validator was used to validate all Python modules and files in this project. No errors were found.
 
 The only file that gave an error was the `ascii_art.py` file. The warnings are some lines that are too long, which can't be undone or shortened, whitespaces, and an invalid escape sequence. This can't be fixed without breaking the ASCII style that is being used.
@@ -250,7 +250,7 @@ The error code is the following:
 
 &nbsp;
 
-### Manual Testing
+### Manual Testing 🌎
 Family and friends tested my app on their devices, and no issues were reported.
 
 The scores below are the average results obtained from three users who attempted the following tests:
@@ -266,7 +266,7 @@ The scores below are the average results obtained from three users who attempted
 
 &nbsp;
 
-### **Solved Bugs**
+### **Solved Bugs** 🌎
 | Type   | Bug | Solution |
 |--------|-----|----------|
 | run.py | The validation function was also accepting substrings of valid values, which led to unexpected behavior. For example, if the user was prompted to enter a continent and typed "asi", the code incorrectly considered this input as valid because "asi" is a substring of "Asia." This behavior was not desired as wanted and made the applicaiton to break further in the code when using the input data by user | I removed the line `key_value = user_content` as it was unnecessary. When user_content, originally a list, was assigned to a new variable (`key_value`), it became a string. Consequently, attempts to compare or search using in failed because `key_value` had become a string and not a list.  |
@@ -277,7 +277,7 @@ The scores below are the average results obtained from three users who attempted
 
 &nbsp;
 
-### **Known Bugs**
+### **Known Bugs** 🌎
 | Type   | Bug | Possible Solution |
 |--------|-----|------------------|
 | run.py | Slow response time when accessing currency data | The program takes a long time to retrieve and display currency data, causing delays in the user experience. This could be due to slow network connections or inefficient data retrieval methods. |
@@ -286,7 +286,7 @@ The scores below are the average results obtained from three users who attempted
 
 ---
 
-## **Deployment** 🌎
+## **Deployment**
 To deploy this project, follow these steps:
 
 1. Fork and clone this repository to your local machine.
@@ -299,7 +299,7 @@ After following these steps, your app should be successfully deployed to Heroku.
 
 ---
 
-## **Credits** 🌎
+## **Credits**
 
 The inspiration for this project's development came from a range of online resources, including tutorials from Simplilearn and Stack Overflow. Additionally, references from websites like W3Schools and Code Institute's learning platform were utilized.
 
@@ -315,7 +315,7 @@ The inspiration for this project's development came from a range of online resou
 - [nkmk](https://note.nkmk.me/en/python-textwrap-wrap-fill-shorten/) for discussions on using the `textwrap` module and text formatting.
 - [Scaler](https://www.scaler.com/topics/how-to-clear-screen-in-python/) for discussions on clearing the screen in Python.
 
-### **Acknowledgments**
+### **Acknowledgments** 🌎
 
 I'd like to give recognition to the individuals who supported me in completing this project:
 
@@ -323,7 +323,7 @@ I'd like to give recognition to the individuals who supported me in completing t
 * Testers [Debbie B](https://github.com/DebbieBergstrom) and [Sandra B](https://github.com/SandraBergstrom) for their significant contributions in providing feedback, identifying errors, and offering valuable insights.
 * [Jubril](https://github.com/Jubrillionaire) and [Brian](), my Code Institute Mentor, for his exceptional guidance and expertise, which greatly contributed to my growth as a developer.
 
-### **License**
+### **License** 🌎
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
